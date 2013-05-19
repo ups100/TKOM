@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  DotT.cpp
+//  Implementation of the Class DotT
+//  Created on:      19-maj-2013 18:12:31
+//  Original author: kopasiak
+///////////////////////////////////////////////////////////
+
+#include "DotT.h"
+
+
+DotT::DotT(){
+
+}
+
+
+
+DotT::~DotT(){
+
+}
