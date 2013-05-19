@@ -1,0 +1,55 @@
+FIRST
+First(Read) = First(Header)
+First(Header) = First(IpmiUtil)
+	First(IpmiUtil) = {ipmiutiliverT} 
+	First(Isensor) = {isensorvT}
+	First(Openning) = { OpenningT }
+	First(Connecting) = {ConnectingT }
+		First(IPAddr) = First(IPAddrNmb)
+			First(IPAddrNmb) = Digit
+
+	First(BmcVer) = {BMCT}
+
+First(Logs1) = {First(ID), e}
+	First(ID) = {HexPairT}
+	First(xx)= {HexPairT}
+	First(Et) = {HexPairT} 
+	First(Own) = {HexPairT} 
+	First(Typ) = {TypeHexSignT}
+	First(S_Num) = {snumT}
+	First(SensDescription ) = {StringT}
+	First(Hex&Reading) = First(HexSigns)
+		First(HexSigns) = {HexPairT, HexSignT, zerosT}
+		First(Reading) = {Digit, minusT}
+
+First(Logs4) = {sensorTypeT, e}
+
+First(PowerOn) = {sdrT}
+
+Follow
+Follow(Read) = {e}
+Follow(Header) = {HexPairT, sensorTypeT, sdrT, tailerT}
+	Follow(IpmiUtil) = {isensorvT}
+	Follow(Isensor) = {OpeningT }
+	Follow(Openning) = {ConnectingT }
+	Follow(Connecting) = {BMCT}
+		Follow(IPAddr) = {nlT}
+			Follow(IPAddrNmb) = {dotT, nlT}
+
+	Follow(BmcVer) = {nlT, titleT} 
+
+Follow(Logs1) = { tailerT, sdrT, HexPair}
+	Follow(ID) = {sdrT, rkwT}
+	Follow(xx)= {HexPairT}
+	Follow(Et) = {HexPairT, intelT, devT}
+	Follow(Own) = {TypeSignT}
+	Follow(Typ) = {snumT}
+	Follow(S_Num) = {StringT, vertT}
+	Follow(SensDescription ) = {eqT, nlT, vertT}
+	Follow(Hex&Reading) = {nlT}
+		Follow(HexSigns) = {nlT, StringT, statusT, HexPair, HexSignT, zerosT}
+		Follow(Reading) = {nlT}
+
+Follow(Logs4) = {sensorTypeT, sdrT, tailerT}
+
+Follow(PowerOn) = {tailerT}

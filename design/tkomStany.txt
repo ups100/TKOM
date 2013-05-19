@@ -1,0 +1,23 @@
+stany:
+Read	v
+Header	v
+Logs1	v
+Logs4	v
+PowerOn	v
+IpmiUtil	v
+Isensor		v
+Openning	v
+Connecting	v
+BmcVer	v
+IPAddr	v
+IPAddrNmb	v
+ID	v
+xx	v
+Et	v
+Own	v
+Typ	v
+S_Num	v
+SensDescription	v 
+Hex&Reading	v
+HexSigns	v
+Reading		v

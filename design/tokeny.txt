@@ -1,0 +1,38 @@
+titleT = "_ID_ SDR_Type_xx ET Own Typ S_Num SesDescription Hex & Interp Reading"
+nlt = "\n"
+ipmiutiliverT = "ipmiutil ver"
+dotT = "."
+isensorvT = "isensor: version"
+OpeningT = "Opening lan connection to node"
+3dotT = ". . . "
+ConnectingT = "Connecting to node"
+BMCT = "-- BMC version"
+pointT = ","
+IPMIvT = "IPMI version"
+sdrT = "SDR"
+eqT  = "="
+oemC0T = "OEM c0"
+intelT = "Intel:"
+fanCtlT = "FanCtl"
+devT = "dev:"
+snumT = "snum"
+zerosT = "0000"
+minusT = "-"
+lkwT = "["
+rkwT = "]"
+VertT = "|" 
+IPMIT = "IPMI"
+sensorPOHT = "sensor: Power On Hours"
+hoursT = "hours"
+tailerT = "ipmiutil sensor, completed successfully"
+
+
+TypeSignT = "a" | "m"
+unitT -> wszystkie jednoski miary
+statusT -> wszystkie statusy
+HexSignT -> znak hex
+HexPairT -> hex dwucyfrowy
+Type2T -> typy dla logu3 
+typeT -> typy wczytane z pliku
+StringT -> jeden wyraz
+sensorTypeT -> wszystkie typy tokenow

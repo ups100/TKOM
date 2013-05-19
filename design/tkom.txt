@@ -1,0 +1,67 @@
+Read -> Header Logs1 Tailer
+Read -> Header Logs4 Tailer
+Read -> Header Logs1 PowerOn Tailer
+Read -> Header Logs4 PowerOn Tailer
+
+	Header -> IpmiUtil Isensor Openning Connecting BmcVer nlT
+	Header -> IpmiUtil Isensor Openning Connecting BmcVer titleT nlT
+
+		IpmiUtil -> ipmiutiliverT Digit dotT Digit Digit nlT
+
+		Isensor -> isensorvT Digit dotT Digit Digit nlT
+
+		Openning -> OpeningT StringT 3dotT nlT
+
+		Connecting -> ConnectingT IPAddr nlT
+			IPAddr -> IPAddrNmb dotT IPAddrNmb dotT IPAddrNmb dotT IPAddrNmb
+			IPAddrNmb-> 
+		
+		BmcVer -> BMCT Digit dotT Digit Digit pointT IPMIvT Digit "." Digit Digit
+
+	Logs1 -> ID sdrT typeT xx Et Own Typ S_Num Sens_Description eqT Hex&Reading nlT Logs1
+	Logs1 -> ID sdrT oemC0T Et intelT fanCtlT HexSigns nlT Logs1
+	Logs1 -> ID sdrT oemC0T Et intelT HexSigns nlT Logs1
+	Logs1 -> ID sdrT type2T xx Et devT HexSigns Sens_description nlT Logs1
+	Logs1 -> epsylon
+			
+		ID -> HexPairT HexPairT
+		
+		typeT -> opcje ktore nie sa gdzie indziej
+
+		xx -> HexPairT
+
+		Et -> HexPairT
+
+		Own -> HexPairT
+
+		Typ -> TypeSignT HexPairT
+
+		#	TypeSign -> a
+		#	TypeSign -> m
+		
+		S_Num -> snumT HexPairT
+
+		Sens_Description -> StringT
+		Sens_Description -> StringT SensDescription
+
+		Hex&Reading -> HexSigns statusT
+		Hex&Reading -> HexSigns statusT Reading
+			
+			HexSigns -> HexPairT HexSigns
+			HexSigns -> HexSignT
+			HexSigns -> zerosT HexSigns
+			HexSigns -> zerosT
+
+		#	statusT -> statusy wszystkie
+
+			Reading -> minusT Digits dotT Digit Digit unitT
+			Reading -> Digits dotT Digit Digit unitT
+
+				Digits -> Digit Digits
+				Digits -> Digit
+				
+	#	Type2 -> typy loga 3
+	
+	Logs4 -> Sensor_Type lkwT ID rkwT vertT S_Num vertT SensDescription vertT Status vertT Reading nlT Logs4
+	Logs4 -> Sensor_Type lkwT ID rkwT vertT S_Num vertT SensDescription vertT Status nlT Logs4
+	Logs4 -> epsylon
