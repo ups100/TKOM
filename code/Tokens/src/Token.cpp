@@ -10,34 +10,30 @@
 namespace TKOM_project {
 namespace Tokens {
 
-
-Token::Token(){
-
-}
-
-
-
-Token::~Token(){
+Token::Token()
+{
 
 }
 
+Token::~Token()
+{
 
-
-
+}
 
 /**
  * true jak pasuje do 1 chociaz
  */
-bool Token::checkNextChar(char character){
+bool Token::checkNextChar(char character)
+{
 
-	return false;
+    return false;
 }
 
+const QString& Token::getCurrentPattern()
+{
 
-const QString& Token::getCurrentPattern(){
-
-	return  QString();
+    return QString();
 }
 
-}//namespace Tokens
-}//namespace TKOM_project
+} //namespace Tokens
+} //namespace TKOM_project

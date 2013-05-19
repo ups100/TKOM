@@ -11,7 +11,7 @@
 namespace TKOM_project {
 
 namespace Tokens {
-    class Token;
+class Token;
 }
 
 namespace Analyser {
@@ -20,13 +20,13 @@ class Lexer
 {
 
 public:
-	Lexer();
-	virtual ~Lexer();
+    Lexer();
+    virtual ~Lexer();
 
-	Tokens::Token* getNextToken();
+    Tokens::Token* getNextToken();
 
 };
 
-}//namespace Analyser
-}//namespace TKOM_project
+} //namespace Analyser
+} //namespace TKOM_project
 #endif // !defined(EA_708417AD_3237_49de_9A7E_424BF36E3E9B__INCLUDED_)

@@ -10,33 +10,30 @@
 namespace TKOM_project {
 namespace Tokens {
 
-TypeSignT::TypeSignT(){
+TypeSignT::TypeSignT()
+{
 
 }
 
-
-
-TypeSignT::~TypeSignT(){
+TypeSignT::~TypeSignT()
+{
 
 }
-
-
-
-
 
 /**
  * true jak pasuje do 1 chociaz
  */
-bool TypeSignT::checkNextChar(char character){
+bool TypeSignT::checkNextChar(char character)
+{
 
-	return false;
+    return false;
 }
 
+QList<TokenTypes> TypeSignT::getTokenTypes()
+{
 
-QList<TokenTypes> TypeSignT::getTokenTypes(){
-
-	return  QList<TokenTypes>();
+    return QList<TokenTypes>();
 }
 
-}//namespace Tokens
-}//namespace TKOM_project
+} //namespace Tokens
+} //namespace TKOM_project

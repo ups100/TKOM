@@ -10,34 +10,31 @@
 namespace TKOM_project {
 namespace Analyser {
 
-Reading::Reading(){
+Reading::Reading()
+{
 
 }
 
-
-
-Reading::~Reading(){
-
-}
-
-
-
-
-
-QMap<QString, QVariant> Reading::getReadingData(){
-
-	return  QMap<QString, QVariant>();
-}
-
-
-void Reading::setUnit(const QString& unit){
+Reading::~Reading()
+{
 
 }
 
+QMap<QString, QVariant> Reading::getReadingData()
+{
 
-void Reading::setValue(const QString& value){
+    return QMap<QString, QVariant>();
+}
+
+void Reading::setUnit(const QString& unit)
+{
 
 }
 
-}//namespace Analyser
-}//namespace TKOM_project
+void Reading::setValue(const QString& value)
+{
+
+}
+
+} //namespace Analyser
+} //namespace TKOM_project

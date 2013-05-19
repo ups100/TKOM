@@ -17,14 +17,14 @@ class TypeSignT : public Token
 {
 
 public:
-	TypeSignT();
-	virtual ~TypeSignT();
+    TypeSignT();
+    virtual ~TypeSignT();
 
-	virtual bool checkNextChar(char character);
-	virtual QList<TokenTypes> getTokenTypes();
+    virtual bool checkNextChar(char character);
+    virtual QList<TokenTypes> getTokenTypes();
 
 };
 
-}//namespace Tokens
-}//namespace TKOM_project
+} //namespace Tokens
+} //namespace TKOM_project
 #endif // !defined(EA_8B83C433_88C1_4608_A01C_11B3E9C93BB9__INCLUDED_)

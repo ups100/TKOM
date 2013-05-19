@@ -10,33 +10,30 @@
 namespace TKOM_project {
 namespace Tokens {
 
-HexPairT::HexPairT(){
+HexPairT::HexPairT()
+{
 
 }
 
-
-
-HexPairT::~HexPairT(){
+HexPairT::~HexPairT()
+{
 
 }
-
-
-
-
 
 /**
  * true jak pasuje do 1 chociaz
  */
-bool HexPairT::checkNextChar(char character){
+bool HexPairT::checkNextChar(char character)
+{
 
-	return false;
+    return false;
 }
 
+QList<TokenTypes> HexPairT::getTokenTypes()
+{
 
-QList<TokenTypes> HexPairT::getTokenTypes(){
-
-	return  QList<TokenTypes>();
+    return QList<TokenTypes>();
 }
 
-}//namespace Tokens
-}//namespace TKOM_project
+} //namespace Tokens
+} //namespace TKOM_project

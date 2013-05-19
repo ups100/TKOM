@@ -15,11 +15,11 @@ class DotT
 {
 
 public:
-	DotT();
-	virtual ~DotT();
+    DotT();
+    virtual ~DotT();
 
 };
 
-}//namespace Tokens
-}//namespace TKOM_project
+} //namespace Tokens
+} //namespace TKOM_project
 #endif // !defined(EA_3393925A_F477_4603_B9D2_1EF9EBBA786C__INCLUDED_)

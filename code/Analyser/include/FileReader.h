@@ -17,15 +17,15 @@ class FileReader
 {
 
 public:
-	FileReader();
-	virtual ~FileReader();
-	Lexer *m_Lexer;
+    FileReader();
+    virtual ~FileReader();
+    Lexer *m_Lexer;
 
-	void adjustPosition(int offset);
-	char getNextChar();
+    void adjustPosition(int offset);
+    char getNextChar();
 
 };
 
-}//namespace Analyser
-}//namespace TKOM_project
+} //namespace Analyser
+} //namespace TKOM_project
 #endif // !defined(EA_C5749D62_4930_4767_9B73_45CB2D0E0467__INCLUDED_)

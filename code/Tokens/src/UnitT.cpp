@@ -10,33 +10,30 @@
 namespace TKOM_project {
 namespace Tokens {
 
-UnitT::UnitT(){
+UnitT::UnitT()
+{
 
 }
 
-
-
-UnitT::~UnitT(){
+UnitT::~UnitT()
+{
 
 }
-
-
-
-
 
 /**
  * true jak pasuje do 1 chociaz
  */
-bool UnitT::checkNextChar(char character){
+bool UnitT::checkNextChar(char character)
+{
 
-	return false;
+    return false;
 }
 
+QList<TokenTypes> UnitT::getTokenTypes()
+{
 
-QList<TokenTypes> UnitT::getTokenTypes(){
-
-	return  QList<TokenTypes>();
+    return QList<TokenTypes>();
 }
 
-}//namespace Tokens
-}//namespace TKOM_project
+} //namespace Tokens
+} //namespace TKOM_project

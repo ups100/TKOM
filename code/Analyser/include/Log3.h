@@ -20,21 +20,21 @@ class Log3 : public Log1Base
 {
 
 public:
-	Log3();
-	virtual ~Log3();
+    Log3();
+    virtual ~Log3();
 
-	virtual QMap<QString, QVariant> getValues();
-	void setDev(const QString& dev);
-	void setHex(const QString& hex);
-	void setSensDesc(const QString& sensDesc);
+    virtual QMap<QString, QVariant> getValues();
+    void setDev(const QString& dev);
+    void setHex(const QString& hex);
+    void setSensDesc(const QString& sensDesc);
 
 private:
-	QString m_dev;
-	QString m_hex;
-	QString m_sensDesc;
+    QString m_dev;
+    QString m_hex;
+    QString m_sensDesc;
 
 };
 
-}//namespace Analyser
-}//namespace TKOM_project
+} //namespace Analyser
+} //namespace TKOM_project
 #endif // !defined(EA_95756016_BCB8_42d0_ACCD_AECE2452B249__INCLUDED_)

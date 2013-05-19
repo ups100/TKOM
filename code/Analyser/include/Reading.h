@@ -19,19 +19,19 @@ class Reading
 {
 
 public:
-	Reading();
-	virtual ~Reading();
+    Reading();
+    virtual ~Reading();
 
-	QMap<QString, QVariant> getReadingData();
-	void setUnit(const QString& unit);
-	void setValue(const QString& value);
+    QMap<QString, QVariant> getReadingData();
+    void setUnit(const QString& unit);
+    void setValue(const QString& value);
 
 private:
-	QString m_unit;
-	float m_value;
+    QString m_unit;
+    float m_value;
 
 };
 
-}//namespace Analyser
-}//namespace TKOM_project
+} //namespace Analyser
+} //namespace TKOM_project
 #endif // !defined(EA_FBA7C0B1_879C_46ef_A585_5ADEA78C21EB__INCLUDED_)

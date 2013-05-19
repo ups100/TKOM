@@ -10,39 +10,36 @@
 namespace TKOM_project {
 namespace Analyser {
 
-Log1Base::Log1Base(){
+Log1Base::Log1Base()
+{
 
 }
 
-
-
-Log1Base::~Log1Base(){
-
-}
-
-
-
-
-
-QMap<QString, QVariant> Log1Base::getValues(){
-
-	return  QMap<QString, QVariant>();
-}
-
-
-void Log1Base::setEt(const QString& et){
+Log1Base::~Log1Base()
+{
 
 }
 
+QMap<QString, QVariant> Log1Base::getValues()
+{
 
-void Log1Base::setType(const QString& type){
+    return QMap<QString, QVariant>();
+}
+
+void Log1Base::setEt(const QString& et)
+{
 
 }
 
-
-void Log1Base::setXx(const QString& xx){
+void Log1Base::setType(const QString& type)
+{
 
 }
 
-}//namespace Analyser
-}//namespace TKOM_project
+void Log1Base::setXx(const QString& xx)
+{
+
+}
+
+} //namespace Analyser
+} //namespace TKOM_project

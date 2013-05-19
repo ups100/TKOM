@@ -10,24 +10,21 @@
 namespace TKOM_project {
 namespace Analyser {
 
-Log4WithReading::Log4WithReading(){
+Log4WithReading::Log4WithReading()
+{
 
 }
 
-
-
-Log4WithReading::~Log4WithReading(){
+Log4WithReading::~Log4WithReading()
+{
 
 }
 
+QMap<QString, QVariant> Log4WithReading::getValues()
+{
 
-
-
-
-QMap<QString, QVariant> Log4WithReading::getValues(){
-
-	return  QMap<QString, QVariant>();
+    return QMap<QString, QVariant>();
 }
 
-}//namespace Analyser
-}//namespace TKOM_project
+} //namespace Analyser
+} //namespace TKOM_project

@@ -10,33 +10,30 @@
 namespace TKOM_project {
 namespace Tokens {
 
-HexSignT::HexSignT(){
+HexSignT::HexSignT()
+{
 
 }
 
-
-
-HexSignT::~HexSignT(){
+HexSignT::~HexSignT()
+{
 
 }
-
-
-
-
 
 /**
  * true jak pasuje do 1 chociaz
  */
-bool HexSignT::checkNextChar(char character){
+bool HexSignT::checkNextChar(char character)
+{
 
-	return false;
+    return false;
 }
 
+QList<TokenTypes> HexSignT::getTokenTypes()
+{
 
-QList<TokenTypes> HexSignT::getTokenTypes(){
-
-	return  QList<TokenTypes>();
+    return QList<TokenTypes>();
 }
 
-}//namespace Tokens
-}//namespace TKOM_project
+} //namespace Tokens
+} //namespace TKOM_project

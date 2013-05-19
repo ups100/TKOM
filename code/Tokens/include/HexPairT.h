@@ -17,14 +17,14 @@ class HexPairT : public Token
 {
 
 public:
-	HexPairT();
-	virtual ~HexPairT();
+    HexPairT();
+    virtual ~HexPairT();
 
-	virtual bool checkNextChar(char character);
-	virtual QList<TokenTypes> getTokenTypes();
+    virtual bool checkNextChar(char character);
+    virtual QList<TokenTypes> getTokenTypes();
 
 };
 
-}//namespace Tokens
-}//namespace TKOM_project
+} //namespace Tokens
+} //namespace TKOM_project
 #endif // !defined(EA_BF514AA3_8E7A_4657_9D84_3FB72FFC2EFE__INCLUDED_)

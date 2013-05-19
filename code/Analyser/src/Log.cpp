@@ -10,34 +10,31 @@
 namespace TKOM_project {
 namespace Analyser {
 
-Log::Log(){
+Log::Log()
+{
 
 }
 
-
-
-Log::~Log(){
-
-}
-
-
-
-
-
-QMap<QString, QVariant> Log::getValues(){
-
-	return  QMap<QString, QVariant>();
-}
-
-
-void Log::setID(const QString& id){
+Log::~Log()
+{
 
 }
 
+QMap<QString, QVariant> Log::getValues()
+{
 
-void Log::setSensorType(QString type){
+    return QMap<QString, QVariant>();
+}
+
+void Log::setID(const QString& id)
+{
 
 }
 
-}//namespace Analyser
-}//namespace TKOM_project
+void Log::setSensorType(QString type)
+{
+
+}
+
+} //namespace Analyser
+} //namespace TKOM_project

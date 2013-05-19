@@ -19,19 +19,19 @@ class Token
 {
 
 public:
-	Token();
-	virtual ~Token();
+    Token();
+    virtual ~Token();
 
-	virtual bool checkNextChar(char character);
-	virtual const QString& getCurrentPattern();
-	virtual int getTokenLength() =0;
-	virtual QList<TokenTypes> getTokenTypes() =0;
+    virtual bool checkNextChar(char character);
+    virtual const QString& getCurrentPattern();
+    virtual int getTokenLength() =0;
+    virtual QList<TokenTypes> getTokenTypes() =0;
 
 protected:
-	QString m_currentPattern;
+    QString m_currentPattern;
 
 };
 
-}//namespace Tokens
-}//namespace TKOM_project
+} //namespace Tokens
+} //namespace TKOM_project
 #endif // !defined(EA_02E3FF6B_AFD2_4d43_BD90_710C8144E679__INCLUDED_)

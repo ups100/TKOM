@@ -17,14 +17,14 @@ class HexSignT : public Token
 {
 
 public:
-	HexSignT();
-	virtual ~HexSignT();
+    HexSignT();
+    virtual ~HexSignT();
 
-	virtual bool checkNextChar(char character);
-	virtual QList<TokenTypes> getTokenTypes();
+    virtual bool checkNextChar(char character);
+    virtual QList<TokenTypes> getTokenTypes();
 
 };
 
-}//namespace Tokens
-}//namespace TKOM_project
+} //namespace Tokens
+} //namespace TKOM_project
 #endif // !defined(EA_0C9B86F5_4FD7_464e_B452_94ED16A169C7__INCLUDED_)

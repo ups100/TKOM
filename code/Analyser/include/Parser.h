@@ -20,40 +20,40 @@ class Parser
 {
 
 public:
-	Parser();
-	virtual ~Parser();
-	Lexer *m_Lexer;
-	DataBaseConnection *m_DataBaseConnection;
-	Header *m_Header;
-	Log *m_Log;
+    Parser();
+    virtual ~Parser();
+    Lexer *m_Lexer;
+    DataBaseConnection *m_DataBaseConnection;
+    Header *m_Header;
+    Log *m_Log;
 
-	void parse();
+    void parse();
 
 private:
-	void bmcVer();
-	void connecting();
-	void et();
-	void header();
-	void hexAndReading();
-	void hexSigns();
-	void id();
-	void ipAddr();
-	void ipAddrNmb();
-	void ipmiUtil();
-	void isensor();
-	void logs1();
-	void logs4();
-	void openning();
-	void own();
-	void powerOn();
-	void read();
-	void reading();
-	void s_num();
-	void sensDescription();
-	void typ();
+    void bmcVer();
+    void connecting();
+    void et();
+    void header();
+    void hexAndReading();
+    void hexSigns();
+    void id();
+    void ipAddr();
+    void ipAddrNmb();
+    void ipmiUtil();
+    void isensor();
+    void logs1();
+    void logs4();
+    void openning();
+    void own();
+    void powerOn();
+    void read();
+    void reading();
+    void s_num();
+    void sensDescription();
+    void typ();
 
 };
 
-}//namespace Analyser
-}//namespace TKOM_project
+} //namespace Analyser
+} //namespace TKOM_project
 #endif // !defined(EA_0495BE45_8C08_4c44_A3EF_FDDB64038647__INCLUDED_)

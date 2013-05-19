@@ -18,17 +18,17 @@ class DataBaseConnection
 {
 
 public:
-	DataBaseConnection();
-	virtual ~DataBaseConnection();
+    DataBaseConnection();
+    virtual ~DataBaseConnection();
 
-	void addHeader(Header * header);
-	void addLog(Log* log);
-	void commit();
-	void rollback();
+    void addHeader(Header * header);
+    void addLog(Log* log);
+    void commit();
+    void rollback();
 
 };
 
-}//namespace Analyser
-}//namespace TKOM_project
+} //namespace Analyser
+} //namespace TKOM_project
 
 #endif // !defined(EA_196A09A8_4AFD_4e95_84A5_5488DF95BD35__INCLUDED_)

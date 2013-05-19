@@ -11,24 +11,21 @@
 namespace TKOM_project {
 namespace Analyser {
 
-Lexer::Lexer(){
+Lexer::Lexer()
+{
 
 }
 
-
-
-Lexer::~Lexer(){
+Lexer::~Lexer()
+{
 
 }
 
+Tokens::Token * Lexer::getNextToken()
+{
 
-
-
-
-Tokens::Token * Lexer::getNextToken(){
-
-	return  0L;
+    return 0L;
 }
 
-}//namespace Analyser
-}//namespace TKOM_project
+} //namespace Analyser
+} //namespace TKOM_project

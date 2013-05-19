@@ -10,29 +10,26 @@
 namespace TKOM_project {
 namespace Analyser {
 
-FileReader::FileReader(){
+FileReader::FileReader()
+{
 
 }
 
-
-
-FileReader::~FileReader(){
-
-}
-
-
-
-
-
-void FileReader::adjustPosition(int offset){
+FileReader::~FileReader()
+{
 
 }
 
+void FileReader::adjustPosition(int offset)
+{
 
-char FileReader::getNextChar(){
-
-	return 0;
 }
 
-}//namespace Analyser
-}//namespace TKOM_project
+char FileReader::getNextChar()
+{
+
+    return 0;
+}
+
+} //namespace Analyser
+} //namespace TKOM_project

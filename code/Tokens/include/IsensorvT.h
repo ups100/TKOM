@@ -15,11 +15,11 @@ class IsensorvT
 {
 
 public:
-	IsensorvT();
-	virtual ~IsensorvT();
+    IsensorvT();
+    virtual ~IsensorvT();
 
 };
 
-}//namespace Tokens
-}//namespace TKOM_project
+} //namespace Tokens
+} //namespace TKOM_project
 #endif // !defined(EA_231CD284_5DCC_4012_9983_A5F39493141B__INCLUDED_)

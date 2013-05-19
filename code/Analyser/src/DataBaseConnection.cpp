@@ -12,38 +12,35 @@
 namespace TKOM_project {
 namespace Analyser {
 
-DataBaseConnection::DataBaseConnection(){
+DataBaseConnection::DataBaseConnection()
+{
 
 }
 
-
-
-DataBaseConnection::~DataBaseConnection(){
-
-}
-
-
-
-
-
-void DataBaseConnection::addHeader(Header * header){
+DataBaseConnection::~DataBaseConnection()
+{
 
 }
 
-
-void DataBaseConnection::addLog(Log* log){
-
-}
-
-
-void DataBaseConnection::commit(){
+void DataBaseConnection::addHeader(Header * header)
+{
 
 }
 
-
-void DataBaseConnection::rollback(){
+void DataBaseConnection::addLog(Log* log)
+{
 
 }
 
-}//namespace Analyser
-}//namespace TKOM_project
+void DataBaseConnection::commit()
+{
+
+}
+
+void DataBaseConnection::rollback()
+{
+
+}
+
+} //namespace Analyser
+} //namespace TKOM_project

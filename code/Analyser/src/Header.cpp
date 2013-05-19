@@ -10,44 +10,41 @@
 namespace TKOM_project {
 namespace Analyser {
 
-Header::Header(){
+Header::Header()
+{
 
 }
 
-
-
-Header::~Header(){
-
-}
-
-
-
-
-
-QMap<QString, QVariant> Header::getValues(){
-
-	return  QMap<QString, QVariant>();
-}
-
-
-void Header::setIpmiVersion(const QString& version){
+Header::~Header()
+{
 
 }
 
+QMap<QString, QVariant> Header::getValues()
+{
 
-void Header::setIsensorVersion(const QString& version){
+    return QMap<QString, QVariant>();
+}
+
+void Header::setIpmiVersion(const QString& version)
+{
 
 }
 
-
-void Header::setNodeIP(const QString& nodeIP){
-
-}
-
-
-void Header::setNodeName(const QString& nodeName){
+void Header::setIsensorVersion(const QString& version)
+{
 
 }
 
-}//namespace Analyser
-}//namespace TKOM_project
+void Header::setNodeIP(const QString& nodeIP)
+{
+
+}
+
+void Header::setNodeName(const QString& nodeName)
+{
+
+}
+
+} //namespace Analyser
+} //namespace TKOM_project

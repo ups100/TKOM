@@ -17,14 +17,14 @@ class nlT : public Token
 {
 
 public:
-	nlT();
-	virtual ~nlT();
+    nlT();
+    virtual ~nlT();
 
-	virtual bool checkNextChar(char character);
-	virtual QList<TokenTypes> getTokenTypes();
+    virtual bool checkNextChar(char character);
+    virtual QList<TokenTypes> getTokenTypes();
 
 };
 
-}//namespace Tokens
-}//namespace TKOM_project
+} //namespace Tokens
+} //namespace TKOM_project
 #endif // !defined(EA_2516163A_E25C_4b40_AAAA_46D8055D6013__INCLUDED_)

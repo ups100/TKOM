@@ -10,15 +10,15 @@
 namespace TKOM_project {
 namespace Tokens {
 
-DotT::DotT(){
+DotT::DotT()
+{
 
 }
 
-
-
-DotT::~DotT(){
+DotT::~DotT()
+{
 
 }
 
-}//namespace Tokens
-}//namespace TKOM_project
+} //namespace Tokens
+} //namespace TKOM_project

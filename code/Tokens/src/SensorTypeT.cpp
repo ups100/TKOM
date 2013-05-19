@@ -10,33 +10,30 @@
 namespace TKOM_project {
 namespace Tokens {
 
-SensorTypeT::SensorTypeT(){
+SensorTypeT::SensorTypeT()
+{
 
 }
 
-
-
-SensorTypeT::~SensorTypeT(){
+SensorTypeT::~SensorTypeT()
+{
 
 }
-
-
-
-
 
 /**
  * true jak pasuje do 1 chociaz
  */
-bool SensorTypeT::checkNextChar(char character){
+bool SensorTypeT::checkNextChar(char character)
+{
 
-	return false;
+    return false;
 }
 
+QList<TokenTypes> SensorTypeT::getTokenTypes()
+{
 
-QList<TokenTypes> SensorTypeT::getTokenTypes(){
-
-	return  QList<TokenTypes>();
+    return QList<TokenTypes>();
 }
 
-}//namespace Tokens
-}//namespace TKOM_project
+} //namespace Tokens
+} //namespace TKOM_project

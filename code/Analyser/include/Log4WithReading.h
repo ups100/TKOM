@@ -21,13 +21,13 @@ class Log4WithReading : public Log4Base, public Reading
 {
 
 public:
-	Log4WithReading();
-	virtual ~Log4WithReading();
+    Log4WithReading();
+    virtual ~Log4WithReading();
 
-	virtual QMap<QString, QVariant> getValues();
+    virtual QMap<QString, QVariant> getValues();
 
 };
 
-}//namespace Analyser
-}//namespace TKOM_project
+} //namespace Analyser
+} //namespace TKOM_project
 #endif // !defined(EA_074134B4_A17C_4b8c_9439_571A446638F9__INCLUDED_)

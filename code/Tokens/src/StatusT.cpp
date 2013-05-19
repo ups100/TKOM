@@ -10,33 +10,30 @@
 namespace TKOM_project {
 namespace Tokens {
 
-StatusT::StatusT(){
+StatusT::StatusT()
+{
 
 }
 
-
-
-StatusT::~StatusT(){
+StatusT::~StatusT()
+{
 
 }
-
-
-
-
 
 /**
  * true jak pasuje do 1 chociaz
  */
-bool StatusT::checkNextChar(char character){
+bool StatusT::checkNextChar(char character)
+{
 
-	return false;
+    return false;
 }
 
+QList<TokenTypes> StatusT::getTokenTypes()
+{
 
-QList<TokenTypes> StatusT::getTokenTypes(){
-
-	return  QList<TokenTypes>();
+    return QList<TokenTypes>();
 }
 
-}//namespace Tokens
-}//namespace TKOM_project
+} //namespace Tokens
+} //namespace TKOM_project

@@ -10,33 +10,30 @@
 namespace TKOM_project {
 namespace Tokens {
 
-Type2T::Type2T(){
+Type2T::Type2T()
+{
 
 }
 
-
-
-Type2T::~Type2T(){
+Type2T::~Type2T()
+{
 
 }
-
-
-
-
 
 /**
  * true jak pasuje do 1 chociaz
  */
-bool Type2T::checkNextChar(char character){
+bool Type2T::checkNextChar(char character)
+{
 
-	return false;
+    return false;
 }
 
+QList<TokenTypes> Type2T::getTokenTypes()
+{
 
-QList<TokenTypes> Type2T::getTokenTypes(){
-
-	return  QList<TokenTypes>();
+    return QList<TokenTypes>();
 }
 
-}//namespace Tokens
-}//namespace TKOM_project
+} //namespace Tokens
+} //namespace TKOM_project

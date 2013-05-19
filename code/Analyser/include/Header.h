@@ -23,24 +23,24 @@ class Header
 {
 
 public:
-	Header();
-	virtual ~Header();
-	Parser *m_Parser;
+    Header();
+    virtual ~Header();
+    Parser *m_Parser;
 
-	QMap<QString, QVariant> getValues();
-	void setIpmiVersion(const QString& version);
-	void setIsensorVersion(const QString& version);
-	void setNodeIP(const QString& nodeIP);
-	void setNodeName(const QString& nodeName);
+    QMap<QString, QVariant> getValues();
+    void setIpmiVersion(const QString& version);
+    void setIsensorVersion(const QString& version);
+    void setNodeIP(const QString& nodeIP);
+    void setNodeName(const QString& nodeName);
 
 private:
-	QString m_ipmiVersion;
-	QString m_isensorVersion;
-	QHostAddress  m_nodeIP;
-	QString m_nodeName;
+    QString m_ipmiVersion;
+    QString m_isensorVersion;
+    QHostAddress m_nodeIP;
+    QString m_nodeName;
 
 };
 
-}//namespace Analyser
-}//namespace TKOM_project
+} //namespace Analyser
+} //namespace TKOM_project
 #endif // !defined(EA_172C0622_69A9_4beb_B999_C42034E02C51__INCLUDED_)

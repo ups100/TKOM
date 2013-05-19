@@ -10,33 +10,30 @@
 namespace TKOM_project {
 namespace Tokens {
 
-SingleOptionToken::SingleOptionToken(){
+SingleOptionToken::SingleOptionToken()
+{
 
 }
 
-
-
-SingleOptionToken::~SingleOptionToken(){
+SingleOptionToken::~SingleOptionToken()
+{
 
 }
-
-
-
-
 
 /**
  * true jak pasuje do 1 chociaz
  */
-bool SingleOptionToken::checkNextChar(char character){
+bool SingleOptionToken::checkNextChar(char character)
+{
 
-	return false;
+    return false;
 }
 
+QList<TokenTypes> SingleOptionToken::getTokenTypes()
+{
 
-QList<TokenTypes> SingleOptionToken::getTokenTypes(){
-
-	return  QList<TokenTypes>();
+    return QList<TokenTypes>();
 }
 
-}//namespace Tokens
-}//namespace TKOM_project
+} //namespace Tokens
+} //namespace TKOM_project

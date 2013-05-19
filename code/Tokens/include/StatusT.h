@@ -17,14 +17,14 @@ class StatusT : public Token
 {
 
 public:
-	StatusT();
-	virtual ~StatusT();
+    StatusT();
+    virtual ~StatusT();
 
-	virtual bool checkNextChar(char character);
-	virtual QList<TokenTypes> getTokenTypes();
+    virtual bool checkNextChar(char character);
+    virtual QList<TokenTypes> getTokenTypes();
 
 };
 
-}//namespace Tokens
-}//namespace TKOM_project
+} //namespace Tokens
+} //namespace TKOM_project
 #endif // !defined(EA_5B500C13_3A96_42a9_852C_3A75EFFF646E__INCLUDED_)

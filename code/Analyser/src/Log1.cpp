@@ -10,49 +10,46 @@
 namespace TKOM_project {
 namespace Analyser {
 
-Log1::Log1(){
+Log1::Log1()
+{
 
 }
 
-
-
-Log1::~Log1(){
-
-}
-
-
-
-
-
-QMap<QString, QVariant> Log1::getValues(){
-
-	return  QMap<QString, QVariant>();
-}
-
-
-void Log1::setHex(const QString& hex){
+Log1::~Log1()
+{
 
 }
 
+QMap<QString, QVariant> Log1::getValues()
+{
 
-void Log1::setOwn(const QString& own){
+    return QMap<QString, QVariant>();
+}
+
+void Log1::setHex(const QString& hex)
+{
 
 }
 
-
-void Log1::setSensDesc(const QString& desc){
-
-}
-
-
-void Log1::setSnum(const QString& snum){
+void Log1::setOwn(const QString& own)
+{
 
 }
 
-
-void Log1::setTyp(const QString& typ){
+void Log1::setSensDesc(const QString& desc)
+{
 
 }
 
-}//namespace Analyser
-}//namespace TKOM_project
+void Log1::setSnum(const QString& snum)
+{
+
+}
+
+void Log1::setTyp(const QString& typ)
+{
+
+}
+
+} //namespace Analyser
+} //namespace TKOM_project

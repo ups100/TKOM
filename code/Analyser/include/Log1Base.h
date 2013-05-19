@@ -20,20 +20,20 @@ class Log1Base : public Log
 {
 
 public:
-	Log1Base();
-	virtual ~Log1Base();
+    Log1Base();
+    virtual ~Log1Base();
 
-	virtual QMap<QString, QVariant> getValues();
-	void setEt(const QString& et);
-	void setType(const QString& type);
-	void setXx(const QString& xx);
+    virtual QMap<QString, QVariant> getValues();
+    void setEt(const QString& et);
+    void setType(const QString& type);
+    void setXx(const QString& xx);
 
 private:
-	int m_et;
-	QString m_type;
-	int m_xx;
+    int m_et;
+    QString m_type;
+    int m_xx;
 
 };
-}//namespace Analyser
-}//namespace TKOM_project
+} //namespace Analyser
+} //namespace TKOM_project
 #endif // !defined(EA_4AEBE7D9_A1C9_4b53_8FEF_62C7D919CB69__INCLUDED_)

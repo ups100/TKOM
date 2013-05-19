@@ -10,128 +10,125 @@
 namespace TKOM_project {
 namespace Analyser {
 
-Parser::Parser(){
+Parser::Parser()
+{
 
 }
 
-
-
-Parser::~Parser(){
-
-}
-
-
-
-
-
-void Parser::bmcVer(){
+Parser::~Parser()
+{
 
 }
 
-
-void Parser::connecting(){
-
-}
-
-
-void Parser::et(){
+void Parser::bmcVer()
+{
 
 }
 
-
-void Parser::header(){
-
-}
-
-
-void Parser::hexAndReading(){
+void Parser::connecting()
+{
 
 }
 
-
-void Parser::hexSigns(){
-
-}
-
-
-void Parser::id(){
+void Parser::et()
+{
 
 }
 
-
-void Parser::ipAddr(){
-
-}
-
-
-void Parser::ipAddrNmb(){
+void Parser::header()
+{
 
 }
 
-
-void Parser::ipmiUtil(){
-
-}
-
-
-void Parser::isensor(){
+void Parser::hexAndReading()
+{
 
 }
 
-
-void Parser::logs1(){
-
-}
-
-
-void Parser::logs4(){
+void Parser::hexSigns()
+{
 
 }
 
-
-void Parser::openning(){
-
-}
-
-
-void Parser::own(){
+void Parser::id()
+{
 
 }
 
-
-void Parser::parse(){
-
-}
-
-
-void Parser::powerOn(){
+void Parser::ipAddr()
+{
 
 }
 
-
-void Parser::read(){
-
-}
-
-
-void Parser::reading(){
+void Parser::ipAddrNmb()
+{
 
 }
 
-
-void Parser::s_num(){
-
-}
-
-
-void Parser::sensDescription(){
+void Parser::ipmiUtil()
+{
 
 }
 
-
-void Parser::typ(){
+void Parser::isensor()
+{
 
 }
 
-}//namespace Analyser
-}//namespace TKOM_project
+void Parser::logs1()
+{
+
+}
+
+void Parser::logs4()
+{
+
+}
+
+void Parser::openning()
+{
+
+}
+
+void Parser::own()
+{
+
+}
+
+void Parser::parse()
+{
+
+}
+
+void Parser::powerOn()
+{
+
+}
+
+void Parser::read()
+{
+
+}
+
+void Parser::reading()
+{
+
+}
+
+void Parser::s_num()
+{
+
+}
+
+void Parser::sensDescription()
+{
+
+}
+
+void Parser::typ()
+{
+
+}
+
+} //namespace Analyser
+} //namespace TKOM_project
