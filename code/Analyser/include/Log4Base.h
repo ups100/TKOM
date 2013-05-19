@@ -9,6 +9,12 @@
 #define EA_74FE7AFC_A5B5_4cb0_B7B5_F243DE26F020__INCLUDED_
 
 #include "Log.h"
+#include <QMap>
+#include <QVariant>
+#include <QString>
+
+namespace TKOM_project {
+namespace Analyser {
 
 class Log4Base : public Log
 {
@@ -28,4 +34,7 @@ private:
 	QString m_status;
 
 };
+
+}//namespace Analyser
+}//namespace TKOM_project
 #endif // !defined(EA_74FE7AFC_A5B5_4cb0_B7B5_F243DE26F020__INCLUDED_)

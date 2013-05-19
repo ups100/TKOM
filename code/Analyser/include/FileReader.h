@@ -10,6 +10,9 @@
 
 #include "Lexer.h"
 
+namespace TKOM_project {
+namespace Analyser {
+
 class FileReader
 {
 
@@ -22,4 +25,7 @@ public:
 	char getNextChar();
 
 };
+
+}//namespace Analyser
+}//namespace TKOM_project
 #endif // !defined(EA_C5749D62_4930_4767_9B73_45CB2D0E0467__INCLUDED_)

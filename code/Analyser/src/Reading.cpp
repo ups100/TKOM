@@ -7,6 +7,8 @@
 
 #include "Reading.h"
 
+namespace TKOM_project {
+namespace Analyser {
 
 Reading::Reading(){
 
@@ -24,7 +26,7 @@ Reading::~Reading(){
 
 QMap<QString, QVariant> Reading::getReadingData(){
 
-	return  NULL;
+	return  QMap<QString, QVariant>();
 }
 
 
@@ -36,3 +38,6 @@ void Reading::setUnit(const QString& unit){
 void Reading::setValue(const QString& value){
 
 }
+
+}//namespace Analyser
+}//namespace TKOM_project

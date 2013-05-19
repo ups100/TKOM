@@ -9,6 +9,12 @@
 #define EA_95756016_BCB8_42d0_ACCD_AECE2452B249__INCLUDED_
 
 #include "Log1Base.h"
+#include <QMap>
+#include <QVariant>
+#include <QString>
+
+namespace TKOM_project {
+namespace Analyser {
 
 class Log3 : public Log1Base
 {
@@ -28,4 +34,7 @@ private:
 	QString m_sensDesc;
 
 };
+
+}//namespace Analyser
+}//namespace TKOM_project
 #endif // !defined(EA_95756016_BCB8_42d0_ACCD_AECE2452B249__INCLUDED_)

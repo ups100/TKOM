@@ -7,6 +7,8 @@
 
 #include "IsensorvT.h"
 
+namespace TKOM_project {
+namespace Tokens {
 
 IsensorvT::IsensorvT(){
 
@@ -17,3 +19,6 @@ IsensorvT::IsensorvT(){
 IsensorvT::~IsensorvT(){
 
 }
+
+}//namespace Tokens
+}//namespace TKOM_project

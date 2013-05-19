@@ -8,7 +8,13 @@
 #if !defined(EA_33F6AE29_4A5B_49e6_9E92_495CFDF77CA9__INCLUDED_)
 #define EA_33F6AE29_4A5B_49e6_9E92_495CFDF77CA9__INCLUDED_
 
+namespace TKOM_project {
+namespace Tokens {
+
 enum TokenTypes
 {
 };
+
+}//namespace Tokens
+}//namespace TKOM_project
 #endif // !defined(EA_33F6AE29_4A5B_49e6_9E92_495CFDF77CA9__INCLUDED_)

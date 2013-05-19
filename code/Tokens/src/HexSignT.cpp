@@ -7,6 +7,8 @@
 
 #include "HexSignT.h"
 
+namespace TKOM_project {
+namespace Tokens {
 
 HexSignT::HexSignT(){
 
@@ -33,5 +35,8 @@ bool HexSignT::checkNextChar(char character){
 
 QList<TokenTypes> HexSignT::getTokenTypes(){
 
-	return  NULL;
+	return  QList<TokenTypes>();
 }
+
+}//namespace Tokens
+}//namespace TKOM_project

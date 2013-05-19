@@ -7,6 +7,8 @@
 
 #include "TypeT.h"
 
+namespace TKOM_project {
+namespace Tokens {
 
 TypeT::TypeT(){
 
@@ -33,5 +35,8 @@ bool TypeT::checkNextChar(char character){
 
 QList<TokenTypes> TypeT::getTokenTypes(){
 
-	return  NULL;
+	return  QList<TokenTypes>();
 }
+
+}//namespace Tokens
+}//namespace TKOM_project

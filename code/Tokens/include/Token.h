@@ -8,6 +8,13 @@
 #if !defined(EA_02E3FF6B_AFD2_4d43_BD90_710C8144E679__INCLUDED_)
 #define EA_02E3FF6B_AFD2_4d43_BD90_710C8144E679__INCLUDED_
 
+#include <QList>
+#include <QString>
+#include "TokenTypes.h"
+
+namespace TKOM_project {
+namespace Tokens {
+
 class Token
 {
 
@@ -24,4 +31,7 @@ protected:
 	QString m_currentPattern;
 
 };
+
+}//namespace Tokens
+}//namespace TKOM_project
 #endif // !defined(EA_02E3FF6B_AFD2_4d43_BD90_710C8144E679__INCLUDED_)

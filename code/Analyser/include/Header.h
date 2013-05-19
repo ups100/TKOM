@@ -9,6 +9,15 @@
 #define EA_172C0622_69A9_4beb_B999_C42034E02C51__INCLUDED_
 
 #include "Parser.h"
+#include <QString>
+#include <QMap>
+#include <QVariant>
+#include <QHostAddress>
+
+namespace TKOM_project {
+namespace Analyser {
+
+class Parser;
 
 class Header
 {
@@ -31,4 +40,7 @@ private:
 	QString m_nodeName;
 
 };
+
+}//namespace Analyser
+}//namespace TKOM_project
 #endif // !defined(EA_172C0622_69A9_4beb_B999_C42034E02C51__INCLUDED_)

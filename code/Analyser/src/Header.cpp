@@ -7,6 +7,8 @@
 
 #include "Header.h"
 
+namespace TKOM_project {
+namespace Analyser {
 
 Header::Header(){
 
@@ -24,7 +26,7 @@ Header::~Header(){
 
 QMap<QString, QVariant> Header::getValues(){
 
-	return  NULL;
+	return  QMap<QString, QVariant>();
 }
 
 
@@ -46,3 +48,6 @@ void Header::setNodeIP(const QString& nodeIP){
 void Header::setNodeName(const QString& nodeName){
 
 }
+
+}//namespace Analyser
+}//namespace TKOM_project

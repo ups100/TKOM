@@ -13,6 +13,9 @@
 #include "Header.h"
 #include "Log.h"
 
+namespace TKOM_project {
+namespace Analyser {
+
 class Parser
 {
 
@@ -50,4 +53,7 @@ private:
 	void typ();
 
 };
+
+}//namespace Analyser
+}//namespace TKOM_project
 #endif // !defined(EA_0495BE45_8C08_4c44_A3EF_FDDB64038647__INCLUDED_)

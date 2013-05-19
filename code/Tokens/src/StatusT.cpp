@@ -7,6 +7,8 @@
 
 #include "StatusT.h"
 
+namespace TKOM_project {
+namespace Tokens {
 
 StatusT::StatusT(){
 
@@ -33,5 +35,8 @@ bool StatusT::checkNextChar(char character){
 
 QList<TokenTypes> StatusT::getTokenTypes(){
 
-	return  NULL;
+	return  QList<TokenTypes>();
 }
+
+}//namespace Tokens
+}//namespace TKOM_project

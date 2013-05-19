@@ -10,6 +10,9 @@
 
 #include "Token.h"
 
+namespace TKOM_project {
+namespace Tokens {
+
 class nlT : public Token
 {
 
@@ -21,4 +24,7 @@ public:
 	virtual QList<TokenTypes> getTokenTypes();
 
 };
+
+}//namespace Tokens
+}//namespace TKOM_project
 #endif // !defined(EA_2516163A_E25C_4b40_AAAA_46D8055D6013__INCLUDED_)

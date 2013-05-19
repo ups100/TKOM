@@ -7,6 +7,8 @@
 
 #include "nlT.h"
 
+namespace TKOM_project {
+namespace Tokens {
 
 nlT::nlT(){
 
@@ -33,5 +35,8 @@ bool nlT::checkNextChar(char character){
 
 QList<TokenTypes> nlT::getTokenTypes(){
 
-	return  NULL;
+	return  QList<TokenTypes>();
 }
+
+}//namespace Tokens
+}//namespace TKOM_project

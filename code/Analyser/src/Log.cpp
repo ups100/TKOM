@@ -7,6 +7,8 @@
 
 #include "Log.h"
 
+namespace TKOM_project {
+namespace Analyser {
 
 Log::Log(){
 
@@ -24,7 +26,7 @@ Log::~Log(){
 
 QMap<QString, QVariant> Log::getValues(){
 
-	return  NULL;
+	return  QMap<QString, QVariant>();
 }
 
 
@@ -36,3 +38,6 @@ void Log::setID(const QString& id){
 void Log::setSensorType(QString type){
 
 }
+
+}//namespace Analyser
+}//namespace TKOM_project

@@ -6,7 +6,10 @@
 ///////////////////////////////////////////////////////////
 
 #include "Lexer.h"
+#include "Token.h"
 
+namespace TKOM_project {
+namespace Analyser {
 
 Lexer::Lexer(){
 
@@ -22,7 +25,10 @@ Lexer::~Lexer(){
 
 
 
-Token * Lexer::getNextToken(){
+Tokens::Token * Lexer::getNextToken(){
 
-	return  NULL;
+	return  0L;
 }
+
+}//namespace Analyser
+}//namespace TKOM_project

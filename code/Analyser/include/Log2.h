@@ -9,6 +9,12 @@
 #define EA_090852A5_DC61_4a61_B1E1_0F18BF81C4B3__INCLUDED_
 
 #include "Log1Base.h"
+#include <QMap>
+#include <QVariant>
+#include <QString>
+
+namespace TKOM_project {
+namespace Analyser {
 
 class Log2 : public Log1Base
 {
@@ -18,7 +24,7 @@ public:
 	virtual ~Log2();
 
 	virtual QMap<QString, QVariant> getValues();
-	void setHex(const const QString& hex);
+	void setHex(const QString& hex);
 	void setIntelType(const QString& type);
 
 private:
@@ -26,4 +32,7 @@ private:
 	QString m_intelType;
 
 };
+
+}//namespace Analyser
+}//namespace TKOM_project
 #endif // !defined(EA_090852A5_DC61_4a61_B1E1_0F18BF81C4B3__INCLUDED_)

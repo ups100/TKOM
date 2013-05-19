@@ -8,6 +8,9 @@
 #if !defined(EA_5FA0D0C0_3D51_4c48_8452_41DD38A72C7E__INCLUDED_)
 #define EA_5FA0D0C0_3D51_4c48_8452_41DD38A72C7E__INCLUDED_
 
+namespace TKOM_project {
+namespace Tokens {
+
 class IpmiUtilVerT
 {
 
@@ -16,4 +19,7 @@ public:
 	virtual ~IpmiUtilVerT();
 
 };
+
+}//namespace Tokens
+}//namespace TKOM_project
 #endif // !defined(EA_5FA0D0C0_3D51_4c48_8452_41DD38A72C7E__INCLUDED_)

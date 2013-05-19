@@ -7,6 +7,8 @@
 
 #include "TypeSignT.h"
 
+namespace TKOM_project {
+namespace Tokens {
 
 TypeSignT::TypeSignT(){
 
@@ -33,5 +35,8 @@ bool TypeSignT::checkNextChar(char character){
 
 QList<TokenTypes> TypeSignT::getTokenTypes(){
 
-	return  NULL;
+	return  QList<TokenTypes>();
 }
+
+}//namespace Tokens
+}//namespace TKOM_project

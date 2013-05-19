@@ -7,6 +7,8 @@
 
 #include "Log2.h"
 
+namespace TKOM_project {
+namespace Analyser {
 
 Log2::Log2(){
 
@@ -24,11 +26,11 @@ Log2::~Log2(){
 
 QMap<QString, QVariant> Log2::getValues(){
 
-	return  NULL;
+	return  QMap<QString, QVariant>();
 }
 
 
-void Log2::setHex(const const QString& hex){
+void Log2::setHex(const QString& hex){
 
 }
 
@@ -36,3 +38,6 @@ void Log2::setHex(const const QString& hex){
 void Log2::setIntelType(const QString& type){
 
 }
+
+}//namespace Analyser
+}//namespace TKOM_project

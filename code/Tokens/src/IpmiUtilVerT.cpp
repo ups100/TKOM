@@ -7,6 +7,8 @@
 
 #include "IpmiUtilVerT.h"
 
+namespace TKOM_project {
+namespace Tokens {
 
 IpmiUtilVerT::IpmiUtilVerT(){
 
@@ -17,3 +19,6 @@ IpmiUtilVerT::IpmiUtilVerT(){
 IpmiUtilVerT::~IpmiUtilVerT(){
 
 }
+
+}//namespace Tokens
+}//namespace TKOM_project

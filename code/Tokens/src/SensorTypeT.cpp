@@ -7,6 +7,8 @@
 
 #include "SensorTypeT.h"
 
+namespace TKOM_project {
+namespace Tokens {
 
 SensorTypeT::SensorTypeT(){
 
@@ -33,5 +35,8 @@ bool SensorTypeT::checkNextChar(char character){
 
 QList<TokenTypes> SensorTypeT::getTokenTypes(){
 
-	return  NULL;
+	return  QList<TokenTypes>();
 }
+
+}//namespace Tokens
+}//namespace TKOM_project

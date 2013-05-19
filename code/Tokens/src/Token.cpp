@@ -7,6 +7,9 @@
 
 #include "Token.h"
 
+namespace TKOM_project {
+namespace Tokens {
+
 
 Token::Token(){
 
@@ -33,5 +36,8 @@ bool Token::checkNextChar(char character){
 
 const QString& Token::getCurrentPattern(){
 
-	return  NULL;
+	return  QString();
 }
+
+}//namespace Tokens
+}//namespace TKOM_project

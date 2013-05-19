@@ -7,6 +7,8 @@
 
 #include "StringT.h"
 
+namespace TKOM_project {
+namespace Tokens {
 
 StringT::StringT(){
 
@@ -33,5 +35,8 @@ bool StringT::checkNextChar(char character){
 
 QList<TokenTypes> StringT::getTokenTypes(){
 
-	return  NULL;
+	return  QList<TokenTypes>();
 }
+
+}//namespace Tokens
+}//namespace TKOM_project

@@ -8,6 +8,13 @@
 #if !defined(EA_D80A9CC5_BF46_4ad7_BE0C_7DF7D96C180E__INCLUDED_)
 #define EA_D80A9CC5_BF46_4ad7_BE0C_7DF7D96C180E__INCLUDED_
 
+#include <QMap>
+#include <QString>
+#include <QVariant>
+
+namespace TKOM_project {
+namespace Analyser {
+
 class Log
 {
 
@@ -24,4 +31,7 @@ private:
 	QString m_sensorType;
 
 };
+
+}//namespace Analyser
+}//namespace TKOM_project
 #endif // !defined(EA_D80A9CC5_BF46_4ad7_BE0C_7DF7D96C180E__INCLUDED_)

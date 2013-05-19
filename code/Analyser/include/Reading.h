@@ -8,6 +8,13 @@
 #if !defined(EA_FBA7C0B1_879C_46ef_A585_5ADEA78C21EB__INCLUDED_)
 #define EA_FBA7C0B1_879C_46ef_A585_5ADEA78C21EB__INCLUDED_
 
+#include <QMap>
+#include <QVariant>
+#include <QString>
+
+namespace TKOM_project {
+namespace Analyser {
+
 class Reading
 {
 
@@ -24,4 +31,7 @@ private:
 	float m_value;
 
 };
+
+}//namespace Analyser
+}//namespace TKOM_project
 #endif // !defined(EA_FBA7C0B1_879C_46ef_A585_5ADEA78C21EB__INCLUDED_)

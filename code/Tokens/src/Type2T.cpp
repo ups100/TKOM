@@ -7,6 +7,8 @@
 
 #include "Type2T.h"
 
+namespace TKOM_project {
+namespace Tokens {
 
 Type2T::Type2T(){
 
@@ -33,5 +35,8 @@ bool Type2T::checkNextChar(char character){
 
 QList<TokenTypes> Type2T::getTokenTypes(){
 
-	return  NULL;
+	return  QList<TokenTypes>();
 }
+
+}//namespace Tokens
+}//namespace TKOM_project

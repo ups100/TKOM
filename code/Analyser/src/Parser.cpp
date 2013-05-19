@@ -7,6 +7,8 @@
 
 #include "Parser.h"
 
+namespace TKOM_project {
+namespace Analyser {
 
 Parser::Parser(){
 
@@ -130,3 +132,6 @@ void Parser::sensDescription(){
 void Parser::typ(){
 
 }
+
+}//namespace Analyser
+}//namespace TKOM_project

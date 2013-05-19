@@ -7,6 +7,8 @@
 
 #include "HexPairT.h"
 
+namespace TKOM_project {
+namespace Tokens {
 
 HexPairT::HexPairT(){
 
@@ -33,5 +35,8 @@ bool HexPairT::checkNextChar(char character){
 
 QList<TokenTypes> HexPairT::getTokenTypes(){
 
-	return  NULL;
+	return  QList<TokenTypes>();
 }
+
+}//namespace Tokens
+}//namespace TKOM_project

@@ -7,6 +7,8 @@
 
 #include "Log3.h"
 
+namespace TKOM_project {
+namespace Analyser {
 
 Log3::Log3(){
 
@@ -24,7 +26,7 @@ Log3::~Log3(){
 
 QMap<QString, QVariant> Log3::getValues(){
 
-	return  NULL;
+	return  QMap<QString, QVariant>();
 }
 
 
@@ -41,3 +43,6 @@ void Log3::setHex(const QString& hex){
 void Log3::setSensDesc(const QString& sensDesc){
 
 }
+
+}//namespace Analyser
+}//namespace TKOM_project

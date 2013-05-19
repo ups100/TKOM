@@ -9,6 +9,10 @@
 #define EA_B5F2AAA0_F202_4624_9E27_6EE062FD701C__INCLUDED_
 
 #include "Token.h"
+#include <QMap>
+
+namespace TKOM_project {
+namespace Tokens {
 
 class SingleOptionToken : public Token
 {
@@ -24,4 +28,7 @@ private:
 	QMap<TokenTypes, QString> m_possiblePatterns;
 
 };
+
+}//namespace Tokens
+}//namespace TKOM_project
 #endif // !defined(EA_B5F2AAA0_F202_4624_9E27_6EE062FD701C__INCLUDED_)

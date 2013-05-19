@@ -7,6 +7,8 @@
 
 #include "FileReader.h"
 
+namespace TKOM_project {
+namespace Analyser {
 
 FileReader::FileReader(){
 
@@ -31,3 +33,6 @@ char FileReader::getNextChar(){
 
 	return 0;
 }
+
+}//namespace Analyser
+}//namespace TKOM_project

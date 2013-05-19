@@ -10,6 +10,12 @@
 
 #include "Reading.h"
 #include "Log1Base.h"
+#include <QMap>
+#include <QVariant>
+#include <QString>
+
+namespace TKOM_project {
+namespace Analyser {
 
 class Log1 : public Reading, public Log1Base
 {
@@ -33,4 +39,7 @@ private:
 	QString m_typ;
 
 };
+
+}//namespace Analyser
+}//namespace TKOM_project
 #endif // !defined(EA_940C978A_7D43_44bc_B7FB_91EAD5D96A77__INCLUDED_)

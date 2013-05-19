@@ -7,6 +7,8 @@
 
 #include "TitleT.h"
 
+namespace TKOM_project {
+namespace Tokens {
 
 TitleT::TitleT(){
 
@@ -33,5 +35,8 @@ bool TitleT::checkNextChar(char character){
 
 QList<TokenTypes> TitleT::getTokenTypes(){
 
-	return  NULL;
+	return  QList<TokenTypes>();
 }
+
+}//namespace Tokens
+}//namespace TKOM_project

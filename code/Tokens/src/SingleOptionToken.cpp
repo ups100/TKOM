@@ -7,6 +7,8 @@
 
 #include "SingleOptionToken.h"
 
+namespace TKOM_project {
+namespace Tokens {
 
 SingleOptionToken::SingleOptionToken(){
 
@@ -33,5 +35,8 @@ bool SingleOptionToken::checkNextChar(char character){
 
 QList<TokenTypes> SingleOptionToken::getTokenTypes(){
 
-	return  NULL;
+	return  QList<TokenTypes>();
 }
+
+}//namespace Tokens
+}//namespace TKOM_project
