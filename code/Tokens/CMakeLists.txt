@@ -8,17 +8,13 @@ INCLUDE_DIRECTORIES( 	${QT_INCLUDES}
 
 #if some class inherits QObject (has Q_OBJECT macro) add it's header file here
 SET( TOKENS_SRC
-		${TKOM_SOURCE_DIR}/Tokens/src/DotT.cpp
 		${TKOM_SOURCE_DIR}/Tokens/src/HexPairT.cpp
 		${TKOM_SOURCE_DIR}/Tokens/src/HexSignT.cpp
-		${TKOM_SOURCE_DIR}/Tokens/src/IpmiUtilVerT.cpp
-		${TKOM_SOURCE_DIR}/Tokens/src/IsensorvT.cpp
-		${TKOM_SOURCE_DIR}/Tokens/src/nlT.cpp
+		${TKOM_SOURCE_DIR}/Tokens/src/MultiOptionToken.cpp
 		${TKOM_SOURCE_DIR}/Tokens/src/SensorTypeT.cpp
 		${TKOM_SOURCE_DIR}/Tokens/src/SingleOptionToken.cpp
 		${TKOM_SOURCE_DIR}/Tokens/src/StatusT.cpp
 		${TKOM_SOURCE_DIR}/Tokens/src/StringT.cpp
-		${TKOM_SOURCE_DIR}/Tokens/src/TitleT.cpp
 		${TKOM_SOURCE_DIR}/Tokens/src/Token.cpp
 		${TKOM_SOURCE_DIR}/Tokens/src/Type2T.cpp
 		${TKOM_SOURCE_DIR}/Tokens/src/TypeSignT.cpp

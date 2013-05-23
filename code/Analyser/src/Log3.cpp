@@ -1,9 +1,16 @@
-///////////////////////////////////////////////////////////
-//  Log3.cpp
-//  Implementation of the Class Log3
-//  Created on:      19-maj-2013 18:10:41
-//  Original author: kopasiak
-///////////////////////////////////////////////////////////
+/**
+ * @file Log3.h
+ *
+ * @date 23-05-2013
+ *
+ * @author Opasiak Krzsztof <ups100@tlen.pl>
+ *
+ * @brief Implementation of the Class TKOM_project::Analyser::Log3
+ *
+ * @par Project
+ * This is a part of project realized on Warsaw University of Technology
+ * on TKOM lectures. Project was created to IPMI log analysis.
+ */
 
 #include "Log3.h"
 
@@ -15,6 +22,12 @@ Log3::Log3()
 
 }
 
+Log3::Log3(Log1Base *log)
+: Log1Base(*log)
+{
+    delete log;
+}
+
 Log3::~Log3()
 {
 
@@ -22,23 +35,21 @@ Log3::~Log3()
 
 QMap<QString, QVariant> Log3::getValues()
 {
-
+    QMap<QString, QVariant> map = Log1Base::getValues();
+    map.insert("Hex", m_hex);
+    map.insert("SensorDescription", m_sensDesc);
     return QMap<QString, QVariant>();
 }
 
-void Log3::setDev(const QString& dev)
-{
-
-}
 
 void Log3::setHex(const QString& hex)
 {
-
+    m_hex = hex;
 }
 
 void Log3::setSensDesc(const QString& sensDesc)
 {
-
+    this->m_sensDesc = sensDesc;
 }
 
 } //namespace Analyser

@@ -6,6 +6,7 @@
 ///////////////////////////////////////////////////////////
 
 #include "Header.h"
+#include <QDebug>
 
 namespace TKOM_project {
 namespace Analyser {
@@ -28,22 +29,32 @@ QMap<QString, QVariant> Header::getValues()
 
 void Header::setIpmiVersion(const QString& version)
 {
+    qDebug()<<"IPMI version:\t\t\t"<<version;
+}
 
+void Header::setIpmiUtilVersion(const QString& version)
+{
+    qDebug()<<"IPMI util version:\t\t\t"<<version;
 }
 
 void Header::setIsensorVersion(const QString& version)
 {
+    qDebug()<<"Isensor version:\t\t\t"<<version;
+}
 
+void Header::setBmcVersion(const QString& version)
+{
+    qDebug()<<"BMC version:\t\t\t"<<version;
 }
 
 void Header::setNodeIP(const QString& nodeIP)
 {
-
+    qDebug()<<"IP : \t\t\t"<<nodeIP;
 }
 
 void Header::setNodeName(const QString& nodeName)
 {
-
+    qDebug()<<"name\t\t\t"<<nodeName;
 }
 
 } //namespace Analyser

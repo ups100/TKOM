@@ -1,9 +1,16 @@
-///////////////////////////////////////////////////////////
-//  SensorTypeT.cpp
-//  Implementation of the Class SensorTypeT
-//  Created on:      19-maj-2013 18:12:32
-//  Original author: kopasiak
-///////////////////////////////////////////////////////////
+/**
+ * @file SensorTypeT.cpp
+ *
+ * @date 21-05-2013
+ *
+ * @author Opasiak Krzsztof <ups100@tlen.pl>
+ *
+ * @brief Implementation of the Class TKOM_project::Tokens::SensorTypeT
+ *
+ * @par Project
+ * This is a part of project realized on Warsaw University of Technology
+ * on TKOM lectures. Project was created to IPMI log analysis.
+ */
 
 #include "SensorTypeT.h"
 
@@ -12,27 +19,13 @@ namespace Tokens {
 
 SensorTypeT::SensorTypeT()
 {
-
+    m_types<<SENSORTYPE_T<<STRING_T;
+    this->m_possiblePatterns<<"Compact sensor"<<"Full sensor";
 }
 
 SensorTypeT::~SensorTypeT()
 {
 
-}
-
-/**
- * true jak pasuje do 1 chociaz
- */
-bool SensorTypeT::checkNextChar(char character)
-{
-
-    return false;
-}
-
-QList<TokenTypes> SensorTypeT::getTokenTypes()
-{
-
-    return QList<TokenTypes>();
 }
 
 } //namespace Tokens

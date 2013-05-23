@@ -49,6 +49,8 @@ Read -> Header Logs4 PowerOn Tailer
 			
 			HexSigns -> HexPairT HexSigns
 			HexSigns -> HexSignT
+			HexSigns -> zerosT HexSigns
+			HexSigns -> zerosT
 
 		#	statusT -> statusy wszystkie
 

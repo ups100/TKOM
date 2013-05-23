@@ -22,6 +22,7 @@ SET( ANALYSER_SRC
 		${TKOM_SOURCE_DIR}/Analyser/src/Log.cpp
 		${TKOM_SOURCE_DIR}/Analyser/src/Parser.cpp
 		${TKOM_SOURCE_DIR}/Analyser/src/Reading.cpp
+		${TKOM_SOURCE_DIR}/Analyser/src/PowerOnLog.cpp
 )
 
 add_library( analyser STATIC ${ANALYSER_SRC} )
@@ -29,6 +30,7 @@ add_library( analyser STATIC ${ANALYSER_SRC} )
 #here add some additional qt modules
 TARGET_LINK_LIBRARIES(	analyser
 		${QT_LIBRARIES}
+		${QT_QTNETWORK_LIBRARIES}
 		${Boost_LIBRARIES}
 		${CMAKE_ARCHIVE_OUTPUT_DIRECTORY}/libtokens.a
 )

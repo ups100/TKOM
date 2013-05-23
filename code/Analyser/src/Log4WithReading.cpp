@@ -1,9 +1,16 @@
-///////////////////////////////////////////////////////////
-//  Log4WithReading.cpp
-//  Implementation of the Class Log4WithReading
-//  Created on:      19-maj-2013 18:10:41
-//  Original author: kopasiak
-///////////////////////////////////////////////////////////
+/**
+ * @file Log4WithReading.h
+ *
+ * @date 22-05-2013
+ *
+ * @author Opasiak Krzsztof <ups100@tlen.pl>
+ *
+ * @brief Implementation of the Class TKOM_project::Analyser::Log4WithReading
+ *
+ * @par Project
+ * This is a part of project realized on Warsaw University of Technology
+ * on TKOM lectures. Project was created to IPMI log analysis.
+ */
 
 #include "Log4WithReading.h"
 
@@ -15,6 +22,13 @@ Log4WithReading::Log4WithReading()
 
 }
 
+Log4WithReading::Log4WithReading(Log4Base *base)
+:Log4Base(*base)
+{
+    delete base;
+}
+
+
 Log4WithReading::~Log4WithReading()
 {
 
@@ -22,8 +36,7 @@ Log4WithReading::~Log4WithReading()
 
 QMap<QString, QVariant> Log4WithReading::getValues()
 {
-
-    return QMap<QString, QVariant>();
+    return Log4Base::getValues().unite(Reading::getReadingData());
 }
 
 } //namespace Analyser

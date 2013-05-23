@@ -29,14 +29,16 @@ public:
 
     QMap<QString, QVariant> getValues();
     void setIpmiVersion(const QString& version);
+    void setIpmiUtilVersion(const QString& version);
     void setIsensorVersion(const QString& version);
+    void setBmcVersion(const QString& version);
     void setNodeIP(const QString& nodeIP);
     void setNodeName(const QString& nodeName);
 
 private:
     QString m_ipmiVersion;
     QString m_isensorVersion;
-    QHostAddress m_nodeIP;
+    //QHostAddress m_nodeIP;
     QString m_nodeName;
 
 };

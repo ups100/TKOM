@@ -7,7 +7,7 @@ project (TKOM)
 FIND_PACKAGE( Boost REQUIRED )
 
 #look for qt library (required for this project)
-FIND_PACKAGE( Qt4 REQUIRED )
+FIND_PACKAGE( Qt4 COMPONENTS QtNetwork REQUIRED )
 
 #look for doxygen to make documentation
 find_package(Doxygen REQUIRED)
@@ -16,6 +16,7 @@ INCLUDE( ${QT_USE_FILE} )
 ADD_DEFINITIONS(${QT_DEFINITIONS})
 
 SET(QT_DONT_USE_QTGUI TRUE)
+SET(QT_USE_QTNETWORK true)
 
 #turn on automoc
 SET(CMAKE_AUTOMOC TRUE)

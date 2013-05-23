@@ -1,10 +1,16 @@
-///////////////////////////////////////////////////////////
-//  Type2T.cpp
-//  Implementation of the Class Type2T
-//  Created on:      19-maj-2013 18:12:33
-//  Original author: kopasiak
-///////////////////////////////////////////////////////////
-
+/**
+ * @file Type2T.cpp
+ *
+ * @date 21-05-2013
+ *
+ * @author Opasiak Krzsztof <ups100@tlen.pl>
+ *
+ * @brief Implementation of the Class TKOM_project::Tokens::Type2T
+ *
+ * @par Project
+ * This is a part of project realized on Warsaw University of Technology
+ * on TKOM lectures. Project was created to IPMI log analysis.
+ */
 #include "Type2T.h"
 
 namespace TKOM_project {
@@ -18,21 +24,6 @@ Type2T::Type2T()
 Type2T::~Type2T()
 {
 
-}
-
-/**
- * true jak pasuje do 1 chociaz
- */
-bool Type2T::checkNextChar(char character)
-{
-
-    return false;
-}
-
-QList<TokenTypes> Type2T::getTokenTypes()
-{
-
-    return QList<TokenTypes>();
 }
 
 } //namespace Tokens

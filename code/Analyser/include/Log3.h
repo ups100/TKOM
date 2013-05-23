@@ -1,9 +1,16 @@
-///////////////////////////////////////////////////////////
-//  Log3.h
-//  Implementation of the Class Log3
-//  Created on:      19-maj-2013 18:10:41
-//  Original author: kopasiak
-///////////////////////////////////////////////////////////
+/**
+ * @file Log3.h
+ *
+ * @date 23-05-2013
+ *
+ * @author Opasiak Krzsztof <ups100@tlen.pl>
+ *
+ * @brief Implementation of the Class TKOM_project::Analyser::Log3
+ *
+ * @par Project
+ * This is a part of project realized on Warsaw University of Technology
+ * on TKOM lectures. Project was created to IPMI log analysis.
+ */
 
 #if !defined(EA_95756016_BCB8_42d0_ACCD_AECE2452B249__INCLUDED_)
 #define EA_95756016_BCB8_42d0_ACCD_AECE2452B249__INCLUDED_
@@ -16,21 +23,53 @@
 namespace TKOM_project {
 namespace Analyser {
 
+/**
+ * @brief Represents log class 3
+ */
 class Log3 : public Log1Base
 {
 
 public:
+    /**
+     * @brief Constructor
+     */
     Log3();
+
+    /**
+     * @brief Constructor
+     */
+    Log3(Log1Base *log);
+
+    /**
+     * @brief Destructor
+     */
     virtual ~Log3();
 
     virtual QMap<QString, QVariant> getValues();
-    void setDev(const QString& dev);
+
+    /**
+     * @brief Sets the hex values collected from log
+     *
+     * @para[in] hex to be set
+     */
     void setHex(const QString& hex);
-    void setSensDesc(const QString& sensDesc);
+
+    /**
+     * @brief Sets the sensor description
+     *
+     * @param[in] desc to be set
+     */
+    void setSensDesc(const QString& desc);
 
 private:
-    QString m_dev;
+    /**
+     * @brief Hex value from log
+     */
     QString m_hex;
+
+    /**
+     * @brief Sensor description
+     */
     QString m_sensDesc;
 
 };

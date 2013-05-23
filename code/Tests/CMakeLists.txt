@@ -18,6 +18,8 @@ add_executable( testProgram ${TESTS_SRC} )
 #here add some additional qt modules
 TARGET_LINK_LIBRARIES(	testProgram
 		${QT_LIBRARIES}
+		${QT_QTNETWORK_LIBRARIES}
 		${Boost_LIBRARIES}
 		${CMAKE_ARCHIVE_OUTPUT_DIRECTORY}/libanalyser.a
+		${CMAKE_ARCHIVE_OUTPUT_DIRECTORY}/libtokens.a
 )
