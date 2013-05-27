@@ -33,7 +33,7 @@ QMap<QString, QVariant> Log4Base::getValues()
     map.insert("SensorDescription", m_sensDesc);
     map.insert("S_Num", m_snum);
     map.insert("SensorStatus", m_status);
-    return QMap<QString, QVariant>();
+    return map;
 }
 
 void Log4Base::setSensDesc(const QString& description)

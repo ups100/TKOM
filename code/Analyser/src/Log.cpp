@@ -33,7 +33,7 @@ QMap<QString, QVariant> Log::getValues()
     QMap<QString, QVariant> pairs;
     if(m_id != -1) pairs.insert(QString("LogID"), m_id);
     pairs.insert(QString("SensorType"), m_sensorType);
-    return QMap<QString, QVariant>();
+    return pairs;
 }
 
 void Log::setID(const QString& id)

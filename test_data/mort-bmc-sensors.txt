@@ -1,0 +1,77 @@
+ipmiutil ver 2.86
+isensor: version 2.86
+Opening lan connection to node mort-bmc ...
+Connecting to node  194.29.168.105
+-- BMC version 1.16, IPMI version 2.0 
+Compact sensor[0001]| snum 01 | Pwr Unit Status  | Enabled 
+Compact sensor[0002]| snum 03 | IPMI Watchdog    | OK  
+Compact sensor[0003]| snum 04 | Physical Scrty   | OK  
+Compact sensor[0004]| snum 06 | SMI Timeout      | OK
+Compact sensor[0005]| snum 07 | System Event Log | OK  
+Compact sensor[0006]| snum 08 | System Event     | OK  
+Compact sensor[0007]| snum 09 | Button           | OK  
+Compact sensor[0009]| snum 0b | VR Watchdog      | OK  
+Compact sensor[000a]| snum 0d | SSB Therm Trip   | OK  
+Compact sensor[000b]| snum 10 | BMC FW Health    | OK  
+Full sensor   [000c]| snum 11 | System Airflow   | OK   | 0.00 CFM
+Full sensor   [000e]| snum 20 | BB EDGE Temp     | OK   | 28.00 degrees C
+Full sensor   [000f]| snum 22 | SSB Temp         | OK   | 43.00 degrees C
+Full sensor   [0010]| snum 23 | BB BMC Temp      | OK   | 50.00 degrees C
+Full sensor   [0011]| snum 24 | BB P2 VR Temp    | OK   | 37.00 degrees C
+Full sensor   [0012]| snum 25 | BB MEM VR Temp   | OK   | 39.00 degrees C
+Full sensor   [0013]| snum 2f | LAN NIC Temp     | OK   | 60.00 degrees C
+Full sensor   [0014]| snum 30 | System Fan 1     | OK   | 2842.00 RPM
+Full sensor   [0015]| snum 31 | System Fan 2     | OK   | 2842.00 RPM
+Full sensor   [0016]| snum 32 | System Fan 3     | OK   | 2842.00 RPM
+Full sensor   [0017]| snum 35 | System Fan 6     | OK   | 2744.00 RPM
+Full sensor   [0018]| snum 36 | Processor 1 Fan  | OK   | 1470.00 RPM
+Full sensor   [0019]| snum 37 | Processor 2 Fan  | OK   | 1470.00 RPM
+Full sensor   [001a]| snum 38 | Rear Fan         | OK   | 2842.00 RPM
+Compact sensor[001b]| snum 70 | P1 Status        | ProcPresent
+Compact sensor[001c]| snum 71 | P2 Status        | ProcPresent
+Full sensor   [001d]| snum 74 | P1 Therm Margin  | OK   | -49.00 degrees C
+Full sensor   [001e]| snum 75 | P2 Therm Margin  | OK   | -44.00 degrees C
+Full sensor   [001f]| snum 78 | P1 Therm Ctrl %  | OK   | 0.00 percent
+Full sensor   [0020]| snum 79 | P2 Therm Ctrl %  | OK   | 0.00 percent
+Compact sensor[0021]| snum 7c | P1 ERR2          | OK  
+Compact sensor[0022]| snum 7d | P2 ERR2          | OK  
+Compact sensor[0023]| snum 80 | CATERR           | OK  
+Compact sensor[0024]| snum 81 | P1 MSID Mismatch | OK  
+Compact sensor[0025]| snum 82 | CPU Missing      | OK  
+Full sensor   [0026]| snum 83 | P1 DTS Therm Mgn | OK   | -49.00 degrees C
+Full sensor   [0027]| snum 84 | P2 DTS Therm Mgn | OK   | -44.00 degrees C
+Compact sensor[0028]| snum 87 | P2 MSID Mismatch | OK  
+Compact sensor[0029]| snum 90 | P1 VRD Hot       | OK  
+Compact sensor[002a]| snum 91 | P2 VRD Hot       | OK  
+Compact sensor[002b]| snum 94 | P1 MEM01 VRD Hot | OK  
+Compact sensor[002c]| snum 95 | P1 MEM23 VRD Hot | OK  
+Compact sensor[002d]| snum 96 | P2 MEM01 VRD Hot | OK  
+Compact sensor[002e]| snum 97 | P2 MEM23 VRD Hot | OK  
+Full sensor   [002f]| snum b0 | DIMM Thrm Mrgn 1 | OK   | -57.00 degrees C
+Full sensor   [0030]| snum b1 | DIMM Thrm Mrgn 2 | OK   | -58.00 degrees C
+Full sensor   [0031]| snum b2 | DIMM Thrm Mrgn 3 | OK   | -50.00 degrees C
+Full sensor   [0032]| snum b3 | DIMM Thrm Mrgn 4 | OK   | -55.00 degrees C
+Compact sensor[0033]| snum c0 | Mem P1 Thrm Trip | OK  
+Compact sensor[0034]| snum c1 | Mem P2 Thrm Trip | OK  
+Full sensor   [0035]| snum d0 | BB +12.0V        | OK   | 11.88 Volts
+Full sensor   [0036]| snum d1 | BB +5.0V         | OK   | 5.00 Volts
+Full sensor   [0037]| snum d2 | BB +3.3V         | OK   | 3.28 Volts
+Full sensor   [0038]| snum d3 | BB +5.0V STBY    | OK   | 4.96 Volts
+Full sensor   [0039]| snum d4 | BB +3.3V AUX     | OK   | 3.25 Volts
+Full sensor   [003a]| snum d6 | BB +1.05V P1Vccp | OK   | 0.82 Volts
+Full sensor   [003b]| snum d7 | BB +1.05V P2Vccp | OK   | 0.81 Volts
+Full sensor   [003c]| snum d8 | BB +1.5 P1DDR AB | OK   | 1.49 Volts
+Full sensor   [003d]| snum d9 | BB +1.5 P1DDR CD | OK   | 1.50 Volts
+Full sensor   [003e]| snum da | BB +1.5 P2DDR AB | OK   | 1.50 Volts
+Full sensor   [003f]| snum db | BB +1.5 P2DDR CD | OK   | 1.50 Volts
+Full sensor   [0040]| snum dc | BB +1.8V AUX     | OK   | 1.79 Volts
+Full sensor   [0041]| snum dd | BB +1.1V STBY    | OK   | 1.07 Volts
+Full sensor   [0042]| snum de | BB VBAT          | OK   | 3.16 Volts
+Full sensor   [0043]| snum e4 | BB +1.35 P1LV AB | Init  | 0.00 Volts
+Full sensor   [0044]| snum e5 | BB +1.35 P1LV CD | Init  | 0.00 Volts
+Full sensor   [0045]| snum e6 | BB +1.35 P2LV AB | Init  | 0.00 Volts
+Full sensor   [0046]| snum e7 | BB +1.35 P2LV CD | Init  | 0.00 Volts
+Compact sensor[004a]| snum 1a | NM Capabilities  | Policy 
+Full sensor   [004d]| snum 34 | P1 MTT           | OK   | 0.00 percent
+Full sensor   [004e]| snum 35 | P2 MTT           | OK   | 0.00 percent
+ipmiutil sensor, completed successfully

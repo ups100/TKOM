@@ -39,7 +39,9 @@ bool SingleOptionToken::checkNextChar(char character)
 {
     if (m_incorrect)
         return false;
-
+    //qDebug()<<character;
+    //qDebug()<<m_targetPattern;
+    //qDebug()<<m_targetPattern[m_currentPattern.length()];
     if (character == m_targetPattern[m_currentPattern.length()]) {
         m_currentPattern.append(character);
         return true;
@@ -59,7 +61,7 @@ QList<Token*> SingleOptionToken::getAllSigleOptionTokens()
                     QList<TokenTypes>() << STRING_T
                             << TITLE_T,
                     QString(
-                            "_ID_ SDR_Type_xx ET Own Typ S_Num SesDescription Hex & Interp Reading")));
+                            "_ID_ SDR_Type_xx ET Own Typ S_Num   Sens_Description   Hex & Interp Reading")));
 
     tokens.append(
             new SingleOptionToken(QList<TokenTypes>() << NL_T,
@@ -126,7 +128,7 @@ QList<Token*> SingleOptionToken::getAllSigleOptionTokens()
     tokens.append(
             new SingleOptionToken(
                     QList<TokenTypes>() << STRING_T
-                            << OEMC0_T, QString("OEM c0")));
+                            << OEMC0_T, QString("OEM  c0")));
     tokens.append(
             new SingleOptionToken(
                     QList<TokenTypes>() << STRING_T

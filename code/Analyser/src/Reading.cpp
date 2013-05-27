@@ -18,7 +18,7 @@ namespace TKOM_project {
 namespace Analyser {
 
 Reading::Reading()
-: m_value(-1.0)
+: m_value(-9999.0)
 {
 
 }
@@ -31,9 +31,9 @@ Reading::~Reading()
 QMap<QString, QVariant> Reading::getReadingData()
 {
     QMap<QString, QVariant> map;
-    map.insert("ReadingUnit", m_unit);
-    map.insert("ReadingValue", m_value);
-    return QMap<QString, QVariant>();
+    if(m_value != -9999.0)map.insert("ReadingUnit", m_unit);
+    if(m_value != -9999.0)map.insert("ReadingValue", m_value);
+    return map;
 }
 
 void Reading::setUnit(const QString& unit)

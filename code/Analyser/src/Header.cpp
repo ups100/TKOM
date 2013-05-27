@@ -23,38 +23,44 @@ Header::~Header()
 
 QMap<QString, QVariant> Header::getValues()
 {
-
-    return QMap<QString, QVariant>();
+    QMap<QString, QVariant> map;
+    map.insert("IPMI_Version", m_ipmiVersion);
+    map.insert("IPMIUtil_Version", m_ipmiUtilVersion);
+    map.insert("ISensor_Version", m_isensorVersion);
+    map.insert("BMC_Version", m_bmcVersion);
+    map.insert("NodeName", m_nodeName);
+    map.insert("NodeIP", m_nodeIP);
+    return map;
 }
 
 void Header::setIpmiVersion(const QString& version)
 {
-    qDebug()<<"IPMI version:\t\t\t"<<version;
+    m_ipmiVersion = version;
 }
 
 void Header::setIpmiUtilVersion(const QString& version)
 {
-    qDebug()<<"IPMI util version:\t\t\t"<<version;
+    m_ipmiUtilVersion = version;
 }
 
 void Header::setIsensorVersion(const QString& version)
 {
-    qDebug()<<"Isensor version:\t\t\t"<<version;
+    m_isensorVersion = version;
 }
 
 void Header::setBmcVersion(const QString& version)
 {
-    qDebug()<<"BMC version:\t\t\t"<<version;
+    m_bmcVersion = version;
 }
 
 void Header::setNodeIP(const QString& nodeIP)
 {
-    qDebug()<<"IP : \t\t\t"<<nodeIP;
+    m_nodeIP = nodeIP;
 }
 
 void Header::setNodeName(const QString& nodeName)
 {
-    qDebug()<<"name\t\t\t"<<nodeName;
+    m_nodeName = nodeName;
 }
 
 } //namespace Analyser

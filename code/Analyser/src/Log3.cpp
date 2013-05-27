@@ -38,7 +38,7 @@ QMap<QString, QVariant> Log3::getValues()
     QMap<QString, QVariant> map = Log1Base::getValues();
     map.insert("Hex", m_hex);
     map.insert("SensorDescription", m_sensDesc);
-    return QMap<QString, QVariant>();
+    return map;
 }
 
 

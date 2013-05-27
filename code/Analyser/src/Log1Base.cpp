@@ -13,7 +13,7 @@
  */
 
 #include "Log1Base.h"
-
+#include <QDebug>
 namespace TKOM_project {
 namespace Analyser {
 
@@ -32,9 +32,8 @@ QMap<QString, QVariant> Log1Base::getValues()
 {
     QMap<QString, QVariant> map = Log::getValues();
     map.insert("Et", m_et);
-    map.insert("SensorType", m_type);
     map.insert("xx", m_xx);
-    return QMap<QString, QVariant>();
+    return map;
 }
 
 void Log1Base::setEt(const QString& et)
@@ -48,16 +47,11 @@ void Log1Base::setEt(const QString& et)
     }
 }
 
-void Log1Base::setType(const QString& type)
-{
-    m_type = type;
-}
-
 void Log1Base::setXx(const QString& xx)
 {
     bool ok = false;
 
-    m_et = xx.toInt(&ok, 16);
+    m_xx = xx.toInt(&ok, 16);
 
     if (!ok) {
         throw QString("Bad cast: ") + xx;

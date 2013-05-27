@@ -1,9 +1,17 @@
-///////////////////////////////////////////////////////////
-//  Header.h
-//  Implementation of the Class Header
-//  Created on:      19-maj-2013 18:10:40
-//  Original author: kopasiak
-///////////////////////////////////////////////////////////
+/**
+ * @file Header.h
+ *
+ * @date 26-05-2013
+ *
+ * @author Opasiak Krzsztof <ups100@tlen.pl>
+ *
+ * @brief Implementation of the Class TKOM_project::Analyser::Header
+ *
+ * @par Project
+ * This is a part of project realized on Warsaw University of Technology
+ * on TKOM lectures. Project was created to IPMI log analysis.
+ */
+
 
 #if !defined(EA_172C0622_69A9_4beb_B999_C42034E02C51__INCLUDED_)
 #define EA_172C0622_69A9_4beb_B999_C42034E02C51__INCLUDED_
@@ -25,7 +33,6 @@ class Header
 public:
     Header();
     virtual ~Header();
-    Parser *m_Parser;
 
     QMap<QString, QVariant> getValues();
     void setIpmiVersion(const QString& version);
@@ -37,8 +44,10 @@ public:
 
 private:
     QString m_ipmiVersion;
+    QString m_ipmiUtilVersion;
     QString m_isensorVersion;
-    //QHostAddress m_nodeIP;
+    QString m_bmcVersion;
+    QString m_nodeIP;
     QString m_nodeName;
 
 };

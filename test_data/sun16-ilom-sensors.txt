@@ -1,0 +1,135 @@
+ipmiutil ver 2.86
+isensor: version 2.86
+Opening lan connection to node sun16ilom ...
+Connecting to node  194.29.168.100
+-- BMC version 2.00, IPMI version 2.0 
+Compact sensor[5800]| snum 02 | sys.locate.btn   | Asserted
+Compact sensor[5e00]| snum 07 | sys.intsw        | OK  
+Compact sensor[6000]| snum 09 | fp.prsnt         | Present
+Full sensor   [6100]| snum 0a | mb.t_amb0        | OK   | 36.00 degrees C
+Full sensor   [6200]| snum 0b | mb.t_amb1        | OK   | 39.00 degrees C
+Full sensor   [6300]| snum 0c | mb.t_amb2        | OK   | 40.00 degrees C
+Full sensor   [6400]| snum 0d | mb.v_bat         | OK   | 3.10 Volts
+Full sensor   [6500]| snum 0e | mb.v_+3v3aux_r   | OK   | 3.29 Volts
+Full sensor   [6600]| snum 0f | mb.v_+3v3        | OK   | 3.30 Volts
+Full sensor   [6700]| snum 10 | mb.v_+5v         | OK   | 5.07 Volts
+Full sensor   [6800]| snum 11 | mb.v_+12v        | OK   | 12.10 Volts
+Full sensor   [6900]| snum 12 | mb.v_-12v        | OK   | -12.28 Volts
+Full sensor   [6a00]| snum 13 | mb.v_+2v5        | OK   | 2.54 Volts
+Full sensor   [6b00]| snum 14 | mb.v_+1v5        | OK   | 1.53 Volts
+Full sensor   [6c00]| snum 15 | mb.v_+1v2        | OK   | 1.26 Volts
+Compact sensor[6d00]| snum 16 | ps0.prsnt        | Present
+Compact sensor[6e00]| snum 17 | ps0.vinok        | PS_Failed
+Compact sensor[6f00]| snum 18 | ps0.pwrok        | PS_Failed
+Compact sensor[7000]| snum 19 | ps1.prsnt        | Present
+Compact sensor[7100]| snum 1a | ps1.vinok        | PS_Failed
+Compact sensor[7200]| snum 1b | ps1.pwrok        | PS_Failed
+Compact sensor[7300]| snum 1c | ps2.prsnt        | Present
+Compact sensor[7400]| snum 1d | ps2.vinok        | PS_Failed
+Compact sensor[7500]| snum 1e | ps2.pwrok        | PS_Failed
+Compact sensor[7600]| snum 1f | ps3.prsnt        | Present
+Compact sensor[7700]| snum 20 | ps3.vinok        | PS_Failed
+Compact sensor[7800]| snum 21 | ps3.pwrok        | PS_Failed
+Compact sensor[7900]| snum 22 | io.prsnt         | Present
+Compact sensor[7a00]| snum 24 | io.hdd0.fail     | Faulty Faulty
+Compact sensor[7b00]| snum 25 | io.hdd1.fail     | Faulty Faulty
+Compact sensor[7c00]| snum 26 | io.hdd2.fail     | Faulty Faulty
+Compact sensor[7d00]| snum 27 | io.hdd3.fail     | Faulty Faulty
+Compact sensor[7e00]| snum 28 | ft0.fm0.prsnt    | Present
+Full sensor   [7f00]| snum 29 | ft0.fm0.f0.speed | OK   | 2500.00 RPM
+Compact sensor[8100]| snum 2b | ft1.fm0.prsnt    | Present
+Full sensor   [8200]| snum 2c | ft1.fm0.f0.speed | OK   | 2500.00 RPM
+Compact sensor[8400]| snum 2e | ft2.fm0.prsnt    | Present
+Full sensor   [8500]| snum 2f | ft2.fm0.f0.speed | OK   | 2500.00 RPM
+Compact sensor[8700]| snum 31 | ft3.fm0.prsnt    | Present
+Full sensor   [8800]| snum 32 | ft3.fm0.f0.speed | OK   | 2500.00 RPM
+Compact sensor[8a00]| snum 3d | p0.cardfail      | OK  
+Full sensor   [8b00]| snum 3e | p0.t_amb         | OK   | 20.00 degrees C
+Full sensor   [8c00]| snum 40 | p0.v_+2v5        | OK   | 2.44 Volts
+Full sensor   [8d00]| snum 41 | p0.v_core        | OK   | 1.32 Volts
+Full sensor   [8e00]| snum 42 | p0.v_+3v3aux_r   | OK   | 3.22 Volts
+Full sensor   [8f00]| snum 43 | p0.v_+12v        | OK   | 11.78 Volts
+Full sensor   [9000]| snum 44 | p0.v_+1v8        | OK   | 1.72 Volts
+Full sensor   [9100]| snum 45 | p0.v_+1v2        | OK   | 1.19 Volts
+Full sensor   [9200]| snum 46 | p0.v_+0v9vtt     | OK   | 0.89 Volts
+Compact sensor[9300]| snum 51 | p1.cardfail      | OK  
+Full sensor   [9400]| snum 52 | p1.t_amb         | OK   | 20.00 degrees C
+Full sensor   [9500]| snum 54 | p1.v_+2v5        | OK   | 2.41 Volts
+Full sensor   [9600]| snum 55 | p1.v_core        | OK   | 1.30 Volts
+Full sensor   [9700]| snum 56 | p1.v_+3v3aux_r   | OK   | 3.20 Volts
+Full sensor   [9800]| snum 57 | p1.v_+12v        | OK   | 11.72 Volts
+Full sensor   [9900]| snum 58 | p1.v_+1v8        | OK   | 1.72 Volts
+Full sensor   [9a00]| snum 59 | p1.v_+1v2        | OK   | 1.18 Volts
+Full sensor   [9b00]| snum 5a | p1.v_+0v9vtt     | OK   | 0.88 Volts
+Compact sensor[9c00]| snum 65 | p2.cardfail      | OK  
+Full sensor   [9d00]| snum 66 | p2.t_amb         | OK   | 20.00 degrees C
+Full sensor   [9e00]| snum 68 | p2.v_+2v5        | OK   | 2.42 Volts
+Full sensor   [9f00]| snum 69 | p2.v_core        | OK   | 1.32 Volts
+Full sensor   [a000]| snum 6a | p2.v_+3v3aux_r   | OK   | 3.20 Volts
+Full sensor   [a100]| snum 6b | p2.v_+12v        | OK   | 11.72 Volts
+Full sensor   [a200]| snum 6c | p2.v_+1v8        | OK   | 1.72 Volts
+Full sensor   [a300]| snum 6d | p2.v_+1v2        | OK   | 1.18 Volts
+Full sensor   [a400]| snum 6e | p2.v_+0v9vtt     | OK   | 0.89 Volts
+Compact sensor[a500]| snum 79 | p3.cardfail      | OK  
+Full sensor   [a600]| snum 7a | p3.t_amb         | OK   | 20.00 degrees C
+Full sensor   [a700]| snum 7c | p3.v_+2v5        | OK   | 2.43 Volts
+Full sensor   [a800]| snum 7d | p3.v_core        | OK   | 1.26 Volts
+Full sensor   [a900]| snum 7e | p3.v_+3v3aux_r   | OK   | 3.20 Volts
+Full sensor   [aa00]| snum 7f | p3.v_+12v        | OK   | 11.65 Volts
+Full sensor   [ab00]| snum 80 | p3.v_+1v8        | OK   | 1.75 Volts
+Full sensor   [ac00]| snum 81 | p3.v_+1v2        | OK   | 1.18 Volts
+Full sensor   [ad00]| snum 82 | p3.v_+0v9vtt     | OK   | 0.90 Volts
+Compact sensor[ae00]| snum 8d | p4.cardfail      | OK  
+Full sensor   [af00]| snum 8e | p4.t_amb         | OK   | 20.00 degrees C
+Full sensor   [b000]| snum 90 | p4.v_+2v5        | OK   | 2.43 Volts
+Full sensor   [b100]| snum 91 | p4.v_core        | OK   | 1.32 Volts
+Full sensor   [b200]| snum 92 | p4.v_+3v3aux_r   | OK   | 3.22 Volts
+Full sensor   [b300]| snum 93 | p4.v_+12v        | OK   | 11.72 Volts
+Full sensor   [b400]| snum 94 | p4.v_+1v8        | OK   | 1.75 Volts
+Full sensor   [b500]| snum 95 | p4.v_+1v2        | OK   | 1.18 Volts
+Full sensor   [b600]| snum 96 | p4.v_+0v9vtt     | OK   | 0.90 Volts
+Compact sensor[b700]| snum a1 | p5.cardfail      | OK  
+Full sensor   [b800]| snum a2 | p5.t_amb         | OK   | 20.00 degrees C
+Full sensor   [b900]| snum a4 | p5.v_+2v5        | OK   | 2.42 Volts
+Full sensor   [ba00]| snum a5 | p5.v_core        | OK   | 1.30 Volts
+Full sensor   [bb00]| snum a6 | p5.v_+3v3aux_r   | OK   | 3.22 Volts
+Full sensor   [bc00]| snum a7 | p5.v_+12v        | OK   | 11.72 Volts
+Full sensor   [bd00]| snum a8 | p5.v_+1v8        | OK   | 1.75 Volts
+Full sensor   [be00]| snum a9 | p5.v_+1v2        | OK   | 1.18 Volts
+Full sensor   [bf00]| snum aa | p5.v_+0v9vtt     | OK   | 0.90 Volts
+Compact sensor[c000]| snum b5 | p6.cardfail      | OK  
+Full sensor   [c100]| snum b6 | p6.t_amb         | OK   | 20.00 degrees C
+Full sensor   [c200]| snum b8 | p6.v_+2v5        | OK   | 2.44 Volts
+Full sensor   [c300]| snum b9 | p6.v_core        | OK   | 1.32 Volts
+Full sensor   [c400]| snum ba | p6.v_+3v3aux_r   | OK   | 3.22 Volts
+Full sensor   [c500]| snum bb | p6.v_+12v        | OK   | 11.72 Volts
+Full sensor   [c600]| snum bc | p6.v_+1v8        | OK   | 1.72 Volts
+Full sensor   [c700]| snum bd | p6.v_+1v2        | OK   | 1.18 Volts
+Full sensor   [c800]| snum be | p6.v_+0v9vtt     | OK   | 0.89 Volts
+Compact sensor[c900]| snum c9 | p7.cardfail      | OK  
+Full sensor   [ca00]| snum ca | p7.t_amb         | OK   | 20.00 degrees C
+Full sensor   [cb00]| snum cc | p7.v_+2v5        | OK   | 2.43 Volts
+Full sensor   [cc00]| snum cd | p7.v_core        | OK   | 1.30 Volts
+Full sensor   [cd00]| snum ce | p7.v_+3v3aux_r   | OK   | 3.20 Volts
+Full sensor   [ce00]| snum cf | p7.v_+12v        | OK   | 11.65 Volts
+Full sensor   [cf00]| snum d0 | p7.v_+1v8        | OK   | 1.74 Volts
+Full sensor   [d000]| snum d1 | p7.v_+1v2        | OK   | 1.18 Volts
+Full sensor   [d100]| snum d2 | p7.v_+0v9vtt     | OK   | 0.89 Volts
+Compact sensor[d200]| snum 3c | p0.prsnt         | Present
+Compact sensor[d300]| snum 50 | p1.prsnt         | Present
+Compact sensor[d400]| snum 64 | p2.prsnt         | Present
+Compact sensor[d500]| snum 78 | p3.prsnt         | Present
+Compact sensor[d600]| snum 8c | p4.prsnt         | Present
+Compact sensor[d700]| snum a0 | p5.prsnt         | Present
+Compact sensor[d800]| snum b4 | p6.prsnt         | Present
+Compact sensor[d900]| snum c8 | p7.prsnt         | Present
+Full sensor   [da00]| snum 3f | p0.t_core        | OK   | 23.00 degrees C
+Full sensor   [db00]| snum 53 | p1.t_core        | OK   | 23.00 degrees C
+Full sensor   [dc00]| snum 67 | p2.t_core        | OK   | 23.00 degrees C
+Full sensor   [dd00]| snum 7b | p3.t_core        | OK   | 20.00 degrees C
+Full sensor   [de00]| snum 8f | p4.t_core        | OK   | 24.00 degrees C
+Full sensor   [df00]| snum a3 | p5.t_core        | OK   | 20.00 degrees C
+Full sensor   [e000]| snum b7 | p6.t_core        | OK   | 23.00 degrees C
+Full sensor   [e100]| snum cb | p7.t_core        | OK   | 22.00 degrees C
+Compact sensor[3801]| snum d8 | sys.acpi         | Working
+ipmiutil sensor, completed successfully
