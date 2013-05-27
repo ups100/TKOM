@@ -70,19 +70,13 @@ boost::shared_ptr<Tokens::Token> Lexer::getNextToken()
         ++offset;
     } while (isspace(next) && next != '\n');
 
-    bool wasSpace = false; qDebug()<<"zaczynamy";
+    bool wasSpace = false;
     while (tokens.size() > 0) {
-        //qDebug() << "petla pocz " << next;
         wasSpace = isspace(next) ? true : false;
 
         stringT->checkNextChar(next);
 
-        //qDebug() << tokens.size();
         for (QList<Token*>::iterator it = tokens.begin(); it != tokens.end();) {
-            /*  qDebug() << "if";
-             qDebug() << ((*it) == 0L);
-             qDebug() << (it == tokens.end());
-             qDebug() << (*it)->getTokenTypes();*/
             if (!((*it)->checkNextChar(next))) {
                 delete (*it);
                 it = tokens.erase(it);
@@ -90,11 +84,9 @@ boost::shared_ptr<Tokens::Token> Lexer::getNextToken()
                 if ((*it)->isValidNow()) {
                     delete suitable;
                     suitable = (*it);
-                    //qDebug() << "suitable: " << suitable->getCurrentPattern();
 
                     it = tokens.erase(it);
                 } else {
-                    //qDebug() << "skip";
                     ++it;
                 }
             }
@@ -110,14 +102,9 @@ boost::shared_ptr<Tokens::Token> Lexer::getNextToken()
                     new SingleOptionToken(QList<TokenTypes>() << EOF_T,
                             QString("\0")));
         }
-        //qDebug() << "petla koniec next: " << next;
     }
-    //qDebug() << "po forze" << next;
 
     Token *toReturn = (suitable != 0L) ? suitable : stringT;
-    //if (suitable != 0L)
-      //  qDebug() << "dupa";
-    //qDebug() << (toReturn == 0L ? "null" : "nie");
     if (toReturn != stringT) {
         delete stringT;
     } else if (!wasSpace) {
@@ -129,8 +116,6 @@ boost::shared_ptr<Tokens::Token> Lexer::getNextToken()
 
     m_source->adjustPosition(toReturn->getTokenLength() + offset);
 
-    qDebug()<<toReturn->getTokenTypes();
-    qDebug()<<toReturn->getCurrentPattern();
     return boost::shared_ptr<Tokens::Token>(toReturn);
 }
 

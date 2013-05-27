@@ -22,7 +22,7 @@ StatusT::StatusT()
     m_types << STATUS_T << STRING_T;
     m_possiblePatterns << "OK" << "Present" << "Asserted" << "PS_Failed"
             << "Working" << "Init" << "Policy" << "ProcPresent"
-            << "Faulty Faulty" << "Enabled";
+            << "Faulty Faulty" << "Enabled"<<"LogCleared";
 
 }
 

@@ -463,7 +463,6 @@ void Parser::isensor()
 
 void Parser::log1()
 {
-    qDebug()<<"log1";
     if (m_currentT->getTokenTypes().contains(TYPE_T)) {
 
         Log1 *log = static_cast<Log1*>(m_log);
@@ -544,7 +543,6 @@ void Parser::log1()
 
 void Parser::log2()
 {
-    qDebug()<<"log2";
     if (m_currentT->getTokenTypes().contains(OEMC0_T)) {
 
         Log2 *log = static_cast<Log2*>(m_log);
@@ -596,7 +594,6 @@ void Parser::log2()
 
 void Parser::log3()
 {
-    qDebug()<<"log3";
     if (m_currentT->getTokenTypes().contains(TYPE2_T)) {
 
         Log3 *log = static_cast<Log3*>(m_log);

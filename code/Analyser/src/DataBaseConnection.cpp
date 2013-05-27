@@ -48,10 +48,8 @@ void DataBaseConnection::addHeader(Header * header)
             "VALUES (:IPMI_Version, :IPMIUtil_Version, :ISensor_Version, :BMC_Version, :NodeName, :NodeIP)";
 
     QSqlQuery query(queryStr.append(values), m_db);
-    qDebug() << queryStr;
     if (!query.prepare(queryStr)) {
-        qDebug() << "blad##################################"
-                << query.lastError().text();
+        throw query.lastError().text();
     }
     query.bindValue(":IPMI_Version", map["IPMI_Version"]);
     query.bindValue(":IPMIUtil_Version", map["IPMIUtil_Version"]);
@@ -59,27 +57,16 @@ void DataBaseConnection::addHeader(Header * header)
     query.bindValue(":BMC_Version", map["BMC_Version"]);
     query.bindValue(":NodeName", map["NodeName"]);
     query.bindValue(":NodeIP", map["NodeIP"]);
-    qDebug() << query.boundValues().size();
-    qDebug() << query.boundValues().keys();
     if (query.exec()) {
-        qDebug()
-                << "poszlo#######################################################";
-        qDebug() << query.lastInsertId();
         m_id = query.lastInsertId().toLongLong();
     } else {
-        qDebug() << "blad##################################"
-                << query.lastError().text();
+        throw query.lastError().text();
     }
 }
 
 void DataBaseConnection::addLog(Log* log)
 {
     QMap<QString, QVariant> map = log->getValues();
-    qDebug() << "***********************************************************";
-    foreach(QString key, map.keys()) {
-        qDebug() << key << map[key];
-    }
-    qDebug() << "***********************************************************";
 
     QString queryStr = "INSERT INTO log (readID";
     QString values = "VALUES (:readID";
@@ -94,26 +81,20 @@ void DataBaseConnection::addLog(Log* log)
 
     QSqlQuery query(queryStr.append(values), m_db);
     if (!query.prepare(queryStr)) {
-        qDebug() << "blad##################################"
-                << query.lastError().text();
+        throw query.lastError().text();
     }
     query.bindValue(":readID", m_id);
     foreach(QString key, map.keys()) {
         query.bindValue(":" + key, map[key]);
     }
-    if (query.exec()) {
-        qDebug()
-                << "poszlo#######################################################";
-        qDebug() << query.lastInsertId();
-    } else {
-        qDebug() << "blad##################################"
-                << query.lastError().text();
+    if (!query.exec()) {
+        throw query.lastError().text();
     }
 }
 
 void DataBaseConnection::commit()
 {
-    qDebug() << "COMITIREEEEEEEEEEEEEEEEEEEEEEENNNNNNNNNN";
+    qDebug() << "COMMIT";
     m_db.commit();
 }
 
