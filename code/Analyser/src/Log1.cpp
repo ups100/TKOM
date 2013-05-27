@@ -13,7 +13,7 @@
  */
 
 #include "Log1.h"
-
+#include <QDebug>
 namespace TKOM_project {
 namespace Analyser {
 
@@ -71,7 +71,7 @@ void Log1::setSnum(const QString& snum)
 {
     bool ok = false;
 
-    m_own = snum.toInt(&ok, 16);
+    m_snum = snum.toInt(&ok, 16);
 
     if (!ok) {
         throw QString("Bad cast: ") + snum;

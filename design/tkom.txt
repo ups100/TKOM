@@ -3,7 +3,7 @@ Read -> Header Logs4 Tailer
 Read -> Header Logs1 PowerOn Tailer
 Read -> Header Logs4 PowerOn Tailer
 
-	Header -> IpmiUtil Isensor Openning Connecting BmcVer nlT
+	Header -> IpmiUtil Isensor Openning Connecting BmcVer 
 	Header -> IpmiUtil Isensor Openning Connecting BmcVer titleT nlT
 
 		IpmiUtil -> ipmiutiliverT Digit dotT Digit Digit nlT
@@ -16,7 +16,7 @@ Read -> Header Logs4 PowerOn Tailer
 			IPAddr -> IPAddrNmb dotT IPAddrNmb dotT IPAddrNmb dotT IPAddrNmb
 			IPAddrNmb-> 
 		
-		BmcVer -> BMCT Digit dotT Digit Digit pointT IPMIvT Digit "." Digit Digit
+		BmcVer -> BMCT Digit dotT Digit Digit pointT IPMIvT Digit "." Digit Digit nlT
 
 	Logs1 -> ID sdrT typeT xx Et Own Typ S_Num Sens_Description eqT Hex&Reading nlT Logs1
 	Logs1 -> ID sdrT oemC0T Et intelT fanCtlT HexSigns nlT Logs1

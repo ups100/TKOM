@@ -63,8 +63,6 @@ boost::shared_ptr<Tokens::Token> Lexer::getNextToken()
     tokens.append(new TypeT());
     tokens.append(new UnitT());
 
-    tokens.removeAt(0);
-    tokens.size();
     int offset = -1;
     char next;
     do {
@@ -72,9 +70,9 @@ boost::shared_ptr<Tokens::Token> Lexer::getNextToken()
         ++offset;
     } while (isspace(next) && next != '\n');
 
-    bool wasSpace = false;
+    bool wasSpace = false; qDebug()<<"zaczynamy";
     while (tokens.size() > 0) {
-        // qDebug() << "petla pocz " << next;
+        //qDebug() << "petla pocz " << next;
         wasSpace = isspace(next) ? true : false;
 
         stringT->checkNextChar(next);
@@ -131,7 +129,7 @@ boost::shared_ptr<Tokens::Token> Lexer::getNextToken()
 
     m_source->adjustPosition(toReturn->getTokenLength() + offset);
 
-    //qDebug()<<toReturn->getTokenTypes();
+    qDebug()<<toReturn->getTokenTypes();
     qDebug()<<toReturn->getCurrentPattern();
     return boost::shared_ptr<Tokens::Token>(toReturn);
 }

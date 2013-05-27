@@ -19,7 +19,7 @@ namespace Tokens {
 TypeT::TypeT()
 {
     m_types<<TYPE_T<<STRING_T;
-    m_possiblePatterns<<"FRU"<<"IPMB"<<"DLoc";
+    m_possiblePatterns<<"DLoc"<<"Comp"<<"Full"<<"EvtO";
 }
 
 TypeT::~TypeT()

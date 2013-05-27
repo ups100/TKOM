@@ -108,6 +108,12 @@ void Parser::bmcVer()
 
         version += m_currentT->getCurrentPattern();
         m_header->setIpmiVersion(version);
+
+        m_currentT = m_lexer->getNextToken();
+        if (!m_currentT->getTokenTypes().contains(NL_T)) {
+            throw QString("Expected NL_T but got: ")
+                    + m_currentT->getCurrentPattern();
+        }
     } else {
         throw QString("Expected BMC_T but got: ")
                 + m_currentT->getCurrentPattern();
@@ -164,7 +170,7 @@ void Parser::et()
 
         static_cast<Log1Base*>(m_log)->setEt(value);
     } else {
-        throw QString("Expected HEXPAIR_T or HEXSIGN_T but got: ")
+        throw QString("Expected HEXPAIR_T but got: ")
                 + m_currentT->getCurrentPattern();
     }
 }
@@ -207,11 +213,15 @@ void Parser::header()
         bmcVer();
 
         m_currentT = m_lexer->getNextToken();
-        if (!(m_currentT->getTokenTypes().contains(NL_T)
-                || m_currentT->getTokenTypes().contains(TITLE_T))) {
-            throw QString("Expected NL_T or TITLE_T but got: ")
-                    + m_currentT->getCurrentPattern();
+        if (m_currentT->getTokenTypes().contains(TITLE_T)) {
+            m_currentT = m_lexer->getNextToken();
+            if (!m_currentT->getTokenTypes().contains(NL_T)) {
+                throw QString("Expected NL_T but got: ")
+                        + m_currentT->getCurrentPattern();
+            }
+            m_currentT = m_lexer->getNextToken();
         }
+
     } else {
         throw QString("Expected IPMIUTIL_T but got: ")
                 + m_currentT->getCurrentPattern();
@@ -238,6 +248,7 @@ void Parser::hexAndReading()
                 || m_currentT->getTokenTypes().contains(DIGIT_T)
                 || m_currentT->getTokenTypes().contains(DIGIT2_T)) {
             reading();
+            m_currentT = m_lexer->getNextToken();
         } else if (m_currentT->getTokenTypes().contains(NL_T)
                 || m_currentT->getTokenTypes().contains(STATUS_T)
                 || m_currentT->getTokenTypes().contains(STRING_T)) {
@@ -452,10 +463,11 @@ void Parser::isensor()
 
 void Parser::log1()
 {
+    qDebug()<<"log1";
     if (m_currentT->getTokenTypes().contains(TYPE_T)) {
 
         Log1 *log = static_cast<Log1*>(m_log);
-        log->setType(m_currentT->getCurrentPattern());
+        log->setSensorType(m_currentT->getCurrentPattern());
 
         m_currentT = m_lexer->getNextToken();
         if (!m_currentT->getTokenTypes().contains(HEXPAIR_T)) {
@@ -505,6 +517,12 @@ void Parser::log1()
 
         log->setSensDesc(sensDescription());
 
+        if (!m_currentT->getTokenTypes().contains(EQ_T)) {
+            throw QString("Expected EQ_T but got: ")
+                    + m_currentT->getCurrentPattern();
+        }
+
+        m_currentT = m_lexer->getNextToken();
         if (!(m_currentT->getTokenTypes().contains(HEXSIGN_T)
                 || m_currentT->getTokenTypes().contains(HEXPAIR_T))) {
             throw QString("Expected HEXSIGN_T or HEXPAIR_T but got: ")
@@ -513,7 +531,6 @@ void Parser::log1()
 
         hexAndReading();
 
-        m_currentT = m_lexer->getNextToken();
         if (!m_currentT->getTokenTypes().contains(NL_T)) {
             throw QString("Expected NL_T but got: ")
                     + m_currentT->getCurrentPattern();
@@ -527,10 +544,11 @@ void Parser::log1()
 
 void Parser::log2()
 {
+    qDebug()<<"log2";
     if (m_currentT->getTokenTypes().contains(OEMC0_T)) {
 
         Log2 *log = static_cast<Log2*>(m_log);
-        log->setType(m_currentT->getCurrentPattern().left(3));
+        log->setSensorType(m_currentT->getCurrentPattern().left(3));
         log->setXx(m_currentT->getCurrentPattern().right(2));
 
         m_currentT = m_lexer->getNextToken();
@@ -557,9 +575,9 @@ void Parser::log2()
 
         log->setIntelType(description);
 
-        if (!(m_currentT->getTokenTypes().contains(HEXPAIR_T)
-                || m_currentT->getTokenTypes().contains(HEXSIGN_T))) {
-            hexSigns();
+        if (m_currentT->getTokenTypes().contains(HEXPAIR_T)
+                || m_currentT->getTokenTypes().contains(HEXSIGN_T)) {
+            log->setHex(hexSigns());
         } else {
             throw QString("Expected FANCTL_T, HEXSIGN_T or HEXPAIR_T but got: ")
                     + m_currentT->getCurrentPattern();
@@ -578,10 +596,11 @@ void Parser::log2()
 
 void Parser::log3()
 {
+    qDebug()<<"log3";
     if (m_currentT->getTokenTypes().contains(TYPE2_T)) {
 
         Log3 *log = static_cast<Log3*>(m_log);
-        log->setType(m_currentT->getCurrentPattern());
+        log->setSensorType(m_currentT->getCurrentPattern());
 
         m_currentT = m_lexer->getNextToken();
         if (!m_currentT->getTokenTypes().contains(HEXPAIR_T)) {
@@ -593,7 +612,7 @@ void Parser::log3()
 
         m_currentT = m_lexer->getNextToken();
         if (!m_currentT->getTokenTypes().contains(HEXPAIR_T)) {
-            throw QString("Expected HEXPAIR_T but got: ")
+            throw QString("Expected HEXPAIR_T but got: 2")
                     + m_currentT->getCurrentPattern();
         }
 
@@ -601,15 +620,16 @@ void Parser::log3()
 
         m_currentT = m_lexer->getNextToken();
         if (!m_currentT->getTokenTypes().contains(DEV_T)) {
-            throw QString("Expected INTEL_T but got: ")
+            throw QString("Expected DEV_T but got: ")
                     + m_currentT->getCurrentPattern();
         }
 
-        if (!(m_currentT->getTokenTypes().contains(HEXPAIR_T)
-                || m_currentT->getTokenTypes().contains(HEXSIGN_T))) {
-            hexSigns();
+        m_currentT = m_lexer->getNextToken();
+        if (m_currentT->getTokenTypes().contains(HEXPAIR_T)
+                || m_currentT->getTokenTypes().contains(HEXSIGN_T)) {
+            log->setHex(hexSigns());
         } else {
-            throw QString("Expected FANCTL_T, HEXSIGN_T or HEXPAIR_T but got: ")
+            throw QString("Expected HEXSIGN_T or HEXPAIR_T but got: ")
                     + m_currentT->getCurrentPattern();
         }
 
@@ -825,9 +845,8 @@ void Parser::openning()
                     + m_currentT->getCurrentPattern();
         }
 
-        m_header->setNodeName(m_currentT->getCurrentPattern());
+        m_header->setNodeName(hostName());
 
-        m_currentT = m_lexer->getNextToken();
         if (!m_currentT->getTokenTypes().contains(DOT3_T)) {
             throw QString("Expected DOT3_T but got: ")
                     + m_currentT->getCurrentPattern();
@@ -840,6 +859,27 @@ void Parser::openning()
         }
     } else {
         throw QString("Expected IPMIUTIL_T but got: ")
+                + m_currentT->getCurrentPattern();
+    }
+}
+
+QString Parser::hostName()
+{
+    if (m_currentT->getTokenTypes().contains(STRING_T)) {
+        QString description = m_currentT->getCurrentPattern();
+
+        m_currentT = m_lexer->getNextToken();
+        if (m_currentT->getTokenTypes().contains(DOT3_T)) {
+            return description;
+        } else if (m_currentT->getTokenTypes().contains(STRING_T)) {
+            return description + hostName();
+        } else {
+            throw QString("Expected DOT3_T or STRING_T but got: ")
+                    + m_currentT->getCurrentPattern();
+        }
+
+    } else {
+        throw QString("Expected STRING_T but got: ")
                 + m_currentT->getCurrentPattern();
     }
 }
@@ -882,27 +922,27 @@ void Parser::powerOn()
     if (m_currentT->getTokenTypes().contains(SDR_T)) {
         m_currentT = m_lexer->getNextToken();
 
-        if (m_currentT->getTokenTypes().contains(IPMI_T)) {
+        if (!m_currentT->getTokenTypes().contains(IPMI_T)) {
             throw QString("Expected IPMI_T but got: ")
                     + m_currentT->getCurrentPattern();
         }
 
         m_currentT = m_lexer->getNextToken();
-        if (m_currentT->getTokenTypes().contains(SENSOR_T)) {
-            throw QString("Expected SENSOR_T but got: ")
+        if (!m_currentT->getTokenTypes().contains(SENSORPOH_T)) {
+            throw QString("Expected SENSORPOH_T but got: ")
                     + m_currentT->getCurrentPattern();
         }
 
-        m_currentT = m_lexer->getNextToken();
-        if (m_currentT->getTokenTypes().contains(STRING_T)) {
+        if (!m_currentT->getTokenTypes().contains(STRING_T)) {
             throw QString("Expected STRING_T but got: ")
                     + m_currentT->getCurrentPattern();
         }
 
         PowerOnLog *log = static_cast<PowerOnLog*>(m_log);
-        log->setSensDesc(sensDescription());
+        log->setSensDesc(m_currentT->getCurrentPattern());
 
-        if (m_currentT->getTokenTypes().contains(EQ_T)) {
+        m_currentT = m_lexer->getNextToken();
+        if (!m_currentT->getTokenTypes().contains(EQ_T)) {
             throw QString("Expected EQ_T but got: ")
                     + m_currentT->getCurrentPattern();
         }
@@ -916,7 +956,6 @@ void Parser::powerOn()
 
         log->setPowerOnHours(digits());
 
-        m_currentT = m_lexer->getNextToken();
         if (!m_currentT->getTokenTypes().contains(STRING_T)) {
             throw QString("Expected STRING_T but got: ")
                     + m_currentT->getCurrentPattern();
@@ -941,8 +980,6 @@ void Parser::read()
         header();
         m_connection->addHeader(m_header);
         m_header = 0L;
-
-        m_currentT = m_lexer->getNextToken();
 
         if (m_currentT->getTokenTypes().contains(HEXPAIR_T)) {
             m_log = new Log1Base();
@@ -997,6 +1034,7 @@ void Parser::reading()
                     + m_currentT->getCurrentPattern();
         }
 
+        value += m_currentT->getCurrentPattern();
         Reading *reading = dynamic_cast<Reading*>(m_log);
         reading->setValue(value);
 

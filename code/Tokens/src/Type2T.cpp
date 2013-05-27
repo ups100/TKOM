@@ -18,7 +18,8 @@ namespace Tokens {
 
 Type2T::Type2T()
 {
-
+    m_types<<TYPE2_T<<STRING_T;
+    m_possiblePatterns<<"FRU"<<"IPMB";
 }
 
 Type2T::~Type2T()

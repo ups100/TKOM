@@ -47,7 +47,7 @@ Follow(Logs1) = { tailerT, sdrT, HexPair}
 	Follow(S_Num) = {StringT, vertT}
 	Follow(SensDescription ) = {eqT, nlT, vertT}
 	Follow(Hex&Reading) = {nlT}
-		Follow(HexSigns) = {nlT, StringT, statusT, HexPair, HexSignT, zerosT}
+		Follow(HexSigns) = {nlT, StringT, statusT, HexPair, HexSignT}
 		Follow(Reading) = {nlT}
 
 Follow(Logs4) = {sensorTypeT, sdrT, tailerT}

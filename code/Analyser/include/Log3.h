@@ -50,7 +50,7 @@ public:
     /**
      * @brief Sets the hex values collected from log
      *
-     * @para[in] hex to be set
+     * @param[in] hex to be set
      */
     void setHex(const QString& hex);
 

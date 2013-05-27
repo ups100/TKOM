@@ -62,6 +62,7 @@ private:
     void reading();
     void s_num(bool isLog4);
     QString sensDescription();
+    QString hostName();
     void typ();
     void xx();
 

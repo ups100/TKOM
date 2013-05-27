@@ -19,7 +19,7 @@ namespace Tokens {
 UnitT::UnitT()
 {
     m_types << UNIT_T << STRING_T;
-    m_possiblePatterns << "precent" << "Volts" << "RPM" << "degrees C" << "CFM";
+    m_possiblePatterns << "percent" << "Volts" << "RPM" << "degrees C" << "CFM";
 }
 
 UnitT::~UnitT()

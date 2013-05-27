@@ -30,7 +30,7 @@ public:
     /**
      * @brief Description of log
      *
-     * @pram[in] description of log
+     * @param[in] description of log
      */
     void setSensDesc(const QString& description);
 

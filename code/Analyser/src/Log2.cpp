@@ -36,7 +36,7 @@ Log2::~Log2()
 QMap<QString, QVariant> Log2::getValues()
 {
     QMap<QString, QVariant> map = Log1Base::getValues();
-    map.insert("Hex", m_hex);
+    map.insert("HexValues", m_hex);
     map.insert("IntelType", m_intelType);
     return map;
 }

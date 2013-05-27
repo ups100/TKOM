@@ -7,14 +7,14 @@
 #include <QList>
 #include <QDebug>
 #include <iostream>
-
+#include <QtSql/QtSql>
 using namespace TKOM_project::Analyser;
 using namespace TKOM_project::Tokens;
 
 int main(int argc, char **argv)
-{
-    //if(argc < 2) return -1;
-    Lexer *lex = new Lexer(new FileReader(QString("test")));
+{QSqlDatabase m_db;
+    if(argc < 3) return -1;
+    Lexer *lex = new Lexer(new FileReader(argv[1]));
     qDebug()<<"jest obiekt";
 
     /*for(Token *t = lex.getNextToken(); t != 0L; t = lex.getNextToken())
@@ -27,8 +27,11 @@ int main(int argc, char **argv)
         char ch;
         std::cin>>ch;
     }*/
-
-    Parser parser(lex, new DataBaseConnection());
+    try {
+    Parser parser(lex, new DataBaseConnection(argv[2]));
     parser.parse();
+    } catch (QString &s) {
+        qDebug()<<s;
+    }
     return 0;
 }
