@@ -5,7 +5,7 @@
  *
  * @author Opasiak Krzsztof <ups100@tlen.pl>
  *
- * @brief Implementation of the Class TKOM_project::Tokens::CommandDispatcher
+ * @brief Implementation of the Class TKOM_project::Tokens::Token
  *
  * @par Project
  * This is a part of project realized on Warsaw University of Technology

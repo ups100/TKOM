@@ -1,5 +1,5 @@
 /**
- * @file TypeSignT.h
+ * @file TypeSignT.cpp
  *
  * @date 21-05-2013
  *

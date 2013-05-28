@@ -1,9 +1,17 @@
-///////////////////////////////////////////////////////////
-//  Header.cpp
-//  Implementation of the Class Header
-//  Created on:      19-maj-2013 18:10:40
-//  Original author: kopasiak
-///////////////////////////////////////////////////////////
+/**
+ * @file Header.cpp
+ *
+ * @date 26-05-2013
+ *
+ * @author Opasiak Krzsztof <ups100@tlen.pl>
+ *
+ * @brief Implementation of the Class TKOM_project::Analyser::Header
+ *
+ * @par Project
+ * This is a part of project realized on Warsaw University of Technology
+ * on TKOM lectures. Project was created to IPMI log analysis.
+ */
+
 
 #include "Header.h"
 #include <QDebug>

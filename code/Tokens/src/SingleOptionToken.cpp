@@ -1,5 +1,5 @@
 /**
- * @file SingleOptionToken.h
+ * @file SingleOptionToken.cpp
  *
  * @date 19-05-2013
  *

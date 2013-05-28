@@ -1,5 +1,5 @@
 /**
- * @file Log1.h
+ * @file Log1.cpp
  *
  * @date 23-05-2013
  *

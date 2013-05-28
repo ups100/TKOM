@@ -69,7 +69,14 @@ public:
     void rollback();
 
 private:
+    /**
+     * @brief target database
+     */
     QSqlDatabase m_db;
+
+    /**
+     * @brief SQLite do not support foreign keys so we have to keep id of header.
+     */
     qlonglong m_id;
 
 };

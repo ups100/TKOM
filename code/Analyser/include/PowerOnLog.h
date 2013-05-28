@@ -19,6 +19,9 @@
 namespace TKOM_project {
 namespace Analyser {
 
+/**
+ * @brief Clas for collecting data from power on log
+ */
 class PowerOnLog: public Log
 {
 public:

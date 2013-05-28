@@ -21,6 +21,9 @@
 namespace TKOM_project {
 namespace Analyser {
 
+/**
+ * @brief File Reader
+ */
 class FileReader
 {
 

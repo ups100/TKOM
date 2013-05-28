@@ -53,6 +53,9 @@ public:
     boost::shared_ptr<Tokens::Token> getNextToken();
 
 private:
+    /**
+     * @brief Source file
+     */
     FileReader *m_source;
 };
 

@@ -1,5 +1,5 @@
 /**
- * @file Log4WithReading.h
+ * @file Log4WithReading.cpp
  *
  * @date 22-05-2013
  *
